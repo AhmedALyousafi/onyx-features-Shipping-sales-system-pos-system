@@ -8,7 +8,7 @@ class TableWidget extends StatelessWidget {
     return Expanded(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 6),
           child: Column(
             children: [
               // Header Row

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onyx/features/sales_system/adaptivelayout.dart';
-import 'package:onyx/features/sales_system/responsive/home/newitemmodel.dart';
+import 'package:onyx/core/model/newitemmodel.dart';
+import 'package:onyx/core/responsive/adaptivelayout.dart';
 
 class IconOrder extends StatelessWidget {
   List<MenuItemModel> record = [

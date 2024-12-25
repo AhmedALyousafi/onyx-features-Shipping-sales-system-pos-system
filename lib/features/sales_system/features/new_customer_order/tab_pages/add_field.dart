@@ -1,7 +1,7 @@
 //اضافة حقل
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:onyx/features/sales_system/adaptivelayout.dart';
+import 'package:onyx/core/responsive/adaptivelayout.dart';
 
 class Addfield extends StatelessWidget {
   @override

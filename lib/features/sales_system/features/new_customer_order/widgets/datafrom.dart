@@ -1,13 +1,11 @@
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
-import 'package:onyx/features/sales_system/adaptivelayout.dart';
-
+import 'package:onyx/core/responsive/adaptivelayout.dart';
+import 'package:onyx/core/responsive/widgetbutton.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/dataformdropdown.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/mobildropdown.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/textfildmethod.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/tixtfild.dart';
-import 'package:onyx/features/sales_system/responsive/widgetbutton.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

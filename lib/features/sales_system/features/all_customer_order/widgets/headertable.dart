@@ -1,11 +1,11 @@
-import 'package:onyx/features/sales_system/adaptivelayout.dart';
+import 'package:onyx/core/responsive/adaptivelayout.dart';
+import 'package:onyx/core/responsive/dialog.dart';
 import 'package:onyx/features/sales_system/exportFileDialog.dart';
 
 import 'package:onyx/features/sales_system/features/new_customer_order/view/dashboardPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:onyx/features/sales_system/responsive/dialog.dart';
 
 class HeaderTableOrders extends StatefulWidget {
   @override

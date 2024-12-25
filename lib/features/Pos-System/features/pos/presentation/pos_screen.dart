@@ -1,11 +1,14 @@
+import 'package:onyx/core/appbar/header_widget.dart';
+import 'package:onyx/core/appbar/ivoicestatus.dart';
 import 'package:onyx/core/constants/app_constants.dart';
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/appbar/header_widget.dart';
-import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/appbar/ivoicestatus.dart';
+import 'package:onyx/core/theme/app_colors.dart';
+import 'package:onyx/core/theme/app_text_styles.dart';
+import 'package:onyx/core/widgets/app_text_field.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/empte_products_management/products_list_view.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/payment/pyment_widget.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/product/products_grid.dart';

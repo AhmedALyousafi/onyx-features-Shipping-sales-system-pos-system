@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onyx/features/sales_system/responsive/home/newitemmodel.dart';
+import 'package:onyx/core/model/newitemmodel.dart';
 
 class PupupMenuButton extends StatefulWidget {
   const PupupMenuButton({super.key, required this.title, required this.item});
