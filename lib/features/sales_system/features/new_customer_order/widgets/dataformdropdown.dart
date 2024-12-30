@@ -1,6 +1,7 @@
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
 import 'package:onyx/core/responsive/adaptivelayout.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/mobildropdown.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/paymentTextfiled.dart';
 
@@ -78,7 +79,7 @@ class _BankAmountDropdownButtonState extends State<BankAmountDropdownButton> {
                                       color: Colors.white,
                                       border: Border(
                                         bottom: BorderSide(
-                                          color: Color(0xFFD6D6D6),
+                                          color: AppColors.griid,
                                         ),
                                       ),
                                     ),
@@ -257,7 +258,7 @@ class _BankAmountDropdownButtonState extends State<BankAmountDropdownButton> {
                                     decoration: const BoxDecoration(
                                       border: Border(
                                         bottom: BorderSide(
-                                          color: Color(0xFFD6D6D6),
+                                          color: AppColors.griid,
                                         ),
                                       ),
                                     ),
@@ -437,7 +438,7 @@ class _BankAmountDropdownButtonState extends State<BankAmountDropdownButton> {
                                     decoration: const BoxDecoration(
                                       border: Border(
                                         bottom: BorderSide(
-                                          color: Color(0xFFD6D6D6),
+                                          color: AppColors.griid,
                                         ),
                                       ),
                                     ),

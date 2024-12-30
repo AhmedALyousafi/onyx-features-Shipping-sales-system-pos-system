@@ -1,8 +1,11 @@
+import 'package:onyx/core/responsive/home/dropdown.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
 class Addfield extends StatelessWidget {
+  const Addfield({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -10,26 +13,64 @@ class Addfield extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: AdaptiveLayout(
-          desktopLayout: Column(
+          desktopLayout: const Column(
             children: [
               Row(
                 children: [
                   Expanded(
-                    child: _buildDropdown('حقل اضافي 1'),
-                  ),
-                  Expanded(child: _buildDropdown('حقل اضافي 2')),
-                  Expanded(child: _buildDropdown('حقل اضافي 3')),
-                  Expanded(child: _buildDropdown('حقل اضافي 4')),
-                  Expanded(child: _buildDropdown('حقل اضافي 5')),
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 1',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 2',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 3',
+                  )),
+                  const Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 4',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 5',
+                  )),
                 ],
               ),
               Row(
                 children: [
-                  Expanded(child: _buildDropdown('حقل اضافي 6')),
-                  Expanded(child: _buildDropdown('حقل اضافي 7')),
-                  Expanded(child: _buildDropdown('حقل اضافي 8')),
-                  Expanded(child: _buildDropdown('حقل اضافي 9')),
-                  Expanded(child: _buildDropdown('حقل اضافي 10')),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 6',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 7',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 8',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 9',
+                  )),
+                  Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 10',
+                  )),
                 ],
               ),
             ],
@@ -41,8 +82,16 @@ class Addfield extends StatelessWidget {
                   Expanded(
                     child: _buildTextField('حقل اضافي 1'),
                   ),
-                  Expanded(child: _buildDropdown('حقل اضافي 2')),
-                  Expanded(child: _buildDropdown('حقل اضافي 3')),
+                  const Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 2',
+                  )),
+                  const Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 3',
+                  )),
                 ],
               ),
               Row(
@@ -50,7 +99,11 @@ class Addfield extends StatelessWidget {
                   Expanded(
                     child: _buildTextField('حقل اضافي 4'),
                   ),
-                  Expanded(child: _buildDropdown('حقل اضافي 5')),
+                  const Expanded(
+                      child: Dropdown(
+                    '',
+                    lable: 'حقل اضافي 5',
+                  )),
                   Expanded(child: _buildTextField('حقل اضافي 6')),
                 ],
               ),
@@ -64,18 +117,18 @@ class Addfield extends StatelessWidget {
               ),
             ],
           ),
-          mobileLayout: Column(
+          mobileLayout: const Column(
             children: [
-              _buildTextField('حقل اضافي 1'),
-              _buildDropdown('حقل اضافي 2'),
-              _buildDropdown('حقل اضافي 3'),
-              _buildDropdown('حقل اضافي 4'),
-              _buildDropdown('حقل اضافي 5'),
-              _buildDropdown('حقل اضافي 6'),
-              _buildDropdown('حقل اضافي 7'),
-              _buildDropdown('حقل اضافي 8'),
-              _buildDropdown('حقل اضافي 9'),
-              _buildDropdown('حقل اضافي 10'),
+              const Dropdown('', lable: 'حقل اضافي 1'),
+              Dropdown('', lable: 'حقل اضافي 2'),
+              Dropdown('', lable: 'حقل اضافي 3'),
+              Dropdown('', lable: 'حقل اضافي 4'),
+              Dropdown('', lable: 'حقل اضافي 5'),
+              Dropdown('', lable: 'حقل اضافي 6'),
+              Dropdown('', lable: 'حقل اضافي 7'),
+              Dropdown('', lable: 'حقل اضافي 8'),
+              Dropdown('', lable: 'حقل اضافي 9'),
+              Dropdown('', lable: 'حقل اضافي 10'),
             ],
           ),
         ),
@@ -88,49 +141,11 @@ class Addfield extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 4),
       child: TextFormField(
         decoration: InputDecoration(
-          enabledBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Color(0xffd6d6d6))),
+          enabledBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.griid)),
           labelText: label,
-          labelStyle: TextStyle(color: Colors.grey),
-          border: UnderlineInputBorder(),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildDropdown(String label) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: Directionality(
-        textDirection: TextDirection.rtl,
-        child: DropdownButtonFormField2<String>(
-          decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
-              contentPadding: EdgeInsets.all(0)),
-          iconStyleData: IconStyleData(
-              icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),
-          dropdownStyleData: DropdownStyleData(
-            padding: EdgeInsets.zero,
-          ),
-          menuItemStyleData: MenuItemStyleData(padding: EdgeInsets.zero),
-          hint: Text(
-            label,
-            style: TextStyle(
-              color: Colors.grey,
-            ),
-          ),
-          items: [
-            DropdownMenuItem(
-              child: Text("Option 1"),
-              value: "1",
-            ),
-            DropdownMenuItem(
-              child: Text("Option 2"),
-              value: "2",
-            ),
-          ],
-          onChanged: (value) {},
+          labelStyle: const TextStyle(color: Colors.grey),
+          border: const UnderlineInputBorder(),
         ),
       ),
     );

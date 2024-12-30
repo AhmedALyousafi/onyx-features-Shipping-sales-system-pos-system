@@ -51,7 +51,7 @@ class DataTableExample13 extends StatelessWidget {
             child: DataTable(
               headingRowColor: MaterialStateColor.resolveWith(
                   (states) => const Color.fromARGB(255, 1, 100, 181)),
-              columns: [
+              columns: const [
                 DataColumn(
                     label: Text('رقم القسط',
                         style: TextStyle(color: Colors.white))),
@@ -77,11 +77,11 @@ class DataTableExample13 extends StatelessWidget {
                     label: Text('مبلغ الدفعة المقدمة',
                         style: TextStyle(color: Colors.white))),
               ],
-              rows: [
+              rows: const [
                 DataRow(cells: [
                   DataCell(Text('1',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 1, 100, 181)))),
+                          color: Color.fromARGB(255, 1, 100, 181)))),
                   DataCell(Text('31/5/2024')),
                   DataCell(Text('')),
                   DataCell(Text('')),
@@ -93,7 +93,7 @@ class DataTableExample13 extends StatelessWidget {
                 DataRow(cells: [
                   DataCell(Text('1',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 1, 100, 181)))),
+                          color: Color.fromARGB(255, 1, 100, 181)))),
                   DataCell(Text('31/5/2024')),
                   DataCell(Text('')),
                   DataCell(Text('')),

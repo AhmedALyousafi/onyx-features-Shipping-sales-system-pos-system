@@ -14,20 +14,16 @@ class CreditCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                SizedBox(width: 8),
                 Expanded(
                   child: _buildDropdown('نوع الحركة البنكية *'),
                 ),
-                SizedBox(width: 30),
                 Expanded(child: _buildTextField('اسم البنك*')),
-                SizedBox(width: 30),
                 Expanded(child: _buildTextField('اسم البطاقة*')),
-                SizedBox(width: 30),
                 Expanded(child: _buildDropdown('المبلغ البنكي*')),
                 _buildExecuteButton(),
               ],
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             DataTableExample12(),
           ],
         ),
@@ -39,8 +35,8 @@ class CreditCard extends StatelessWidget {
     return TextFormField(
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: TextStyle(color: Colors.grey),
-        border: UnderlineInputBorder(),
+        labelStyle: const TextStyle(color: Colors.grey),
+        border: const UnderlineInputBorder(),
       ),
     );
   }
@@ -52,21 +48,21 @@ class CreditCard extends StatelessWidget {
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: DropdownButtonFormField2<String>(
-            decoration: InputDecoration(contentPadding: EdgeInsets.all(10)),
-            iconStyleData: IconStyleData(
+            decoration: const InputDecoration(contentPadding: EdgeInsets.all(10)),
+            iconStyleData: const IconStyleData(
                 icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),
             hint: Text(
               label,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
               ),
             ),
-            items: [
-              DropdownMenuItem(
+            items: const[
+               DropdownMenuItem(
                 child: Text("Option 1"),
                 value: "1",
               ),
-              DropdownMenuItem(
+               DropdownMenuItem(
                 child: Text("Option 2"),
                 value: "2",
               ),
@@ -80,7 +76,7 @@ class CreditCard extends StatelessWidget {
 }
 
 Widget _buildExecuteButton() {
-  return Row(
+  return const Row(
     children: [
       Directionality(
         textDirection: TextDirection.rtl,

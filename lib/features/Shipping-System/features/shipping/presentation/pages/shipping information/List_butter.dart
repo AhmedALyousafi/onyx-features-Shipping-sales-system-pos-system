@@ -2,6 +2,7 @@
 
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/tab_pages/widgets/tap_add_field.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/tab_pages/widgets/tap_total_containers.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/tab_pages/widgets/tab_additional_data.dart';
@@ -58,7 +59,7 @@ class _TabsAndPagesState extends State<ShipingdocumentForm1>
           TapInsurance(),
           Additionaldata(),
           DocumentFormFields(),
-          TapScreen(),
+          const TapScreen(),
         ];
 
         _tabDesktopController = TabController(
@@ -101,13 +102,13 @@ class _TabsAndPagesState extends State<ShipingdocumentForm1>
                               ),
                               border: Border(
                                 top: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                                 right: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                                 left: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                               ),
                             ),

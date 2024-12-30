@@ -1,6 +1,6 @@
-import 'package:onyx/core/model/newitemmodel.dart';
-
 import 'package:flutter/material.dart';
+import 'package:onyx/core/model/newitemmodel.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class PupupMenuButton extends StatefulWidget {
   const PupupMenuButton({super.key, required this.title, required this.item});
@@ -65,7 +65,7 @@ class _PupupMenuButtonState extends State<PupupMenuButton> {
         child: Container(
           height: 30,
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          color: isHovered ? const Color(0xff0C69C0) : Color(0xffFBFBFB),
+          color: isHovered ?  AppColors.blue : Color(0xffFBFBFB),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -80,7 +80,7 @@ class _PupupMenuButtonState extends State<PupupMenuButton> {
               ),
               Icon(
                 Icons.keyboard_arrow_down,
-                color: isHovered ? Colors.white : const Color(0xFF0C69C0),
+                color: isHovered ? Colors.white :  AppColors.blue,
                 size: 20,
               ),
               const SizedBox(

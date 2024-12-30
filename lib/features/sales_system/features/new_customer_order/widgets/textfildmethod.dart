@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class TextFieldPaymentmethodWidget extends StatelessWidget {
   const TextFieldPaymentmethodWidget(
@@ -34,7 +35,7 @@ class TextFieldPaymentmethodWidget extends StatelessWidget {
                 fillColor: Colors.white,
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
-                    color: Color(0xFFD6D6D6),
+                    color: AppColors.griid,
                   ),
                 ),
                 labelText: lable,

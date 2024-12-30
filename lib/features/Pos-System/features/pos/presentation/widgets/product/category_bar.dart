@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class CategoryBar extends StatefulWidget {
   final Function(String) onCategorySelected; // callback لتحديد الفئة
@@ -119,7 +120,7 @@ class _CategoryBarState extends State<CategoryBar> {
         margin: const EdgeInsets.symmetric(horizontal: 4),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
-          color: isHighlighted ? const Color(0xFF0C69C0) : Colors.white,
+          color: isHighlighted ?  AppColors.blue : Colors.white,
           borderRadius: BorderRadius.circular(4),
           boxShadow: isHighlighted
               ? [

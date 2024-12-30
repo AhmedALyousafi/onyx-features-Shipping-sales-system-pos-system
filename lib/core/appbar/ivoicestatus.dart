@@ -1,5 +1,6 @@
 import 'package:onyx/core/appbar/customtoolbar.dart';
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class InvoiceStatus extends StatefulWidget {
   const InvoiceStatus({super.key});
@@ -65,7 +66,7 @@ class _InvoiceStatusState extends State<InvoiceStatus> {
                   _buildInvoiceChip(
                     color: Colors.white,
                     text: 'فاتورة - 342',
-                    backgroundColor: const Color(0xFF0C69C0),
+                    backgroundColor:  AppColors.blue,
                   ),
                   const SizedBox(width: 8),
                   _buildInvoiceChip(
@@ -77,7 +78,7 @@ class _InvoiceStatusState extends State<InvoiceStatus> {
                   _buildInvoiceChip(
                     text: 'قارئ الأسعار',
                     color: Colors.white,
-                    backgroundColor: const Color(0xFF0C69C0),
+                    backgroundColor:  AppColors.blue,
                   ),
                   const SizedBox(width: 8),
                   _buildInvoiceChip2(
@@ -162,9 +163,9 @@ class _InvoiceStatusState extends State<InvoiceStatus> {
               child: Text(
                 'X',
                 style: TextStyle(
-                  color: backgroundColor == const Color(0xFFFEFAF5)
+                  color: backgroundColor ==  Color(0xFFFEFAF5)
                       ? const Color(0xFFFEFAF5)
-                      : const Color(0xFF0C69C0),
+                      :  AppColors.blue,
                   fontSize: 12,
                 ),
               ),

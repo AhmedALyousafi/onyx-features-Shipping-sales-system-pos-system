@@ -1,5 +1,6 @@
 import 'package:onyx/core/model/newitemmodel.dart';
-import 'package:onyx/core/utils/dropdown.dart';
+import 'package:onyx/core/theme/app_colors.dart';
+import 'package:onyx/core/utils/pupupmenubutton.dart';
 import 'package:onyx/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -381,7 +382,7 @@ class ShippingMainMenu extends StatelessWidget {
                       children: [
                         const Icon(
                           Icons.arrow_back_ios_new,
-                          color: Color(0xff0C69C0),
+                          color: AppColors.blue,
                           size: 14,
                         ),
                         const SizedBox(
@@ -389,7 +390,7 @@ class ShippingMainMenu extends StatelessWidget {
                         ),
                         const Text("بيانات الشحن - جديد",
                             style: TextStyle(
-                              color: Color(0xff0C69C0),
+                              color: AppColors.blue,
                             )),
                         const Spacer(),
                         Container(
@@ -692,7 +693,7 @@ class ShippingMainMenu extends StatelessWidget {
                           child: const Center(
                               child: Icon(
                             FontAwesomeIcons.anglesLeft,
-                            color: Color(0xff0C69C0),
+                            color: AppColors.blue,
                             size: 16,
                           )),
                         ),
@@ -705,7 +706,7 @@ class ShippingMainMenu extends StatelessWidget {
                           child: const Center(
                               child: Icon(
                             FontAwesomeIcons.chevronLeft,
-                            color: Color(0xff0C69C0),
+                            color: AppColors.blue,
                             size: 16,
                           )),
                         ),
@@ -768,7 +769,7 @@ class ShippingMainMenu extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(FontAwesomeIcons.print,
-                              size: 18, color: Color(0xff0C69C0)),
+                              size: 18, color: AppColors.blue),
                           onPressed: () {},
                         ),
                         IconButton(

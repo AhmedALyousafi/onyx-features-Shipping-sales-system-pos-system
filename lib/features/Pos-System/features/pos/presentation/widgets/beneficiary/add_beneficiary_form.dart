@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'form_input_field.dart';
 
 class AddBeneficiaryForm extends StatefulWidget {
@@ -119,7 +120,7 @@ class _AddBeneficiaryFormState extends State<AddBeneficiaryForm> {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xff0C69C0),
+                          backgroundColor:  AppColors.blue,
                           minimumSize: const Size(70, 36),
                           padding: const EdgeInsets.symmetric(
                             horizontal: 16,

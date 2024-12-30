@@ -1,5 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class DropDownButtonWidget extends StatefulWidget {
   const DropDownButtonWidget({
@@ -38,7 +39,7 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
           decoration: InputDecoration(
             enabledBorder: const UnderlineInputBorder(
               borderSide: BorderSide(
-                color: Color(0xFFD6D6D6),
+                color: AppColors.griid,
               ),
             ),
             filled: true,
@@ -63,7 +64,7 @@ class _DropDownButtonWidgetState extends State<DropDownButtonWidget> {
                         color: Colors.white,
                         border: Border(
                           bottom: BorderSide(
-                            color: Color(0xFFD6D6D6),
+                            color: AppColors.griid,
                           ),
                         ),
                       ),

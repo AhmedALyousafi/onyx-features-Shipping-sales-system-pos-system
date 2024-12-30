@@ -1,8 +1,10 @@
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/responsive/home/dropdown_field.dart';
+import 'package:onyx/core/theme/app_colors.dart';
+import 'package:onyx/core/utils/date_field.dart';
 import 'package:onyx/core/utils/responsive.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/shipping%20information/pluto_grid.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,12 +25,21 @@ class Shipingiputformscreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDateField(
-                      "تاريخ الوثيقة *",
+                    Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ الوثيقة *',
+                      ),
                     ),
                     buildTextField("رقم الوثيقة *"),
-                    buildDropdownField("نوع الوثيقة الفرعي *"),
-                    buildDropdownField("الوحدة المالية *"),
+                    DropdownField(
+                      "",
+                      lable: 'نوع الوثيقة الفرعي *',
+                    ),
+                    DropdownField(
+                      "",
+                      lable: 'الوحدة المالية *',
+                    ),
                     buildTextField("السنة *"),
                   ],
                 ),
@@ -38,13 +49,23 @@ class Shipingiputformscreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField(
-                      "رقم بوصلة الشحن*",
+                    DropdownField(
+                      "",
+                      lable: 'رقم بوصلة الشحن*',
                     ),
                     buildTextField("سعر التحويل  *"),
-                    buildDropdownField("العملة*"),
-                    buildDropdownField("رقم المورد*"),
-                    buildDropdownField("رقم أمر الشراء *"),
+                    DropdownField(
+                      "",
+                      lable: 'العملة*',
+                    ),
+                    DropdownField(
+                      "",
+                      lable: 'رقم المورد*',
+                    ),
+                    DropdownField(
+                      "",
+                      lable: 'رقم أمر الشراء *',
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -53,13 +74,26 @@ class Shipingiputformscreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDateField(
-                      "تاريخ فاتورة المورد *",
+                    Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ فاتورة المورد *',
+                      ),
                     ),
                     buildTextField("رقم فاتورة المورد *"),
-                    buildDropdownField("رقم المخزن*"),
-                    buildDropdownField("طريقة الشحن *"),
-                    buildDateField("تاريخ الشحن*"),
+                    DropdownField(
+                      "",
+                      lable: 'رقم المخزن*',
+                    ),
+                    DropdownField(
+                      "",
+                      lable: 'طريقة الشحن *',
+                    ),
+                    Expanded(
+                        child: DateField(
+                      "",
+                      label: 'تاريخ الشحن*',
+                    )),
                   ],
                 ),
                 SizedBox(
@@ -97,7 +131,7 @@ class Shipingiputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات اخرى")),
                 SizedBox(
@@ -107,7 +141,7 @@ class Shipingiputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -133,17 +167,26 @@ class Shipingiputformscreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDateField(
-                      "تاريخ الوثيقة *",
+                    Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ الوثيقة *',
+                      ),
                     ),
                     buildTextField("رقم الوثيقة *"),
-                    buildDropdownField("نوع الوثيقة الفرعي *"),
+                    DropdownField(
+                      "",
+                      lable: 'نوع الوثيقة الفرعي *',
+                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField("الوحدة المالية *"),
+                    DropdownField(
+                      "",
+                      lable: 'الوحدة المالية *',
+                    ),
                     buildTextField("السنة *"),
                     buildTextField("سعر التحويل"),
                   ],
@@ -153,7 +196,10 @@ class Shipingiputformscreen extends StatelessWidget {
                   children: [
                     buildTextField("العملة*"),
                     buildTextField("رقم العميل *"),
-                    buildDropdownField("رقم المخزن *"),
+                    DropdownField(
+                      "",
+                      lable: 'رقم المخزن *',
+                    ),
                   ],
                 ),
                 Row(
@@ -166,8 +212,15 @@ class Shipingiputformscreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     buildTextField("البيان *", isLocked: true),
-                    buildDropdownField("تصنيف الضريبة*"),
-                    buildDateField(" تاريخ الاستحقاق *"),
+                    DropdownField(
+                      "",
+                      lable: 'تصنيف الضريبة*',
+                    ),
+                    Expanded(
+                        child: DateField(
+                      " ",
+                      label: 'تاريخ الاستحقاق *',
+                    )),
                   ],
                 ),
                 SizedBox(
@@ -178,7 +231,7 @@ class Shipingiputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات اخرى")),
                 SizedBox(
@@ -188,7 +241,7 @@ class Shipingiputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -211,100 +264,54 @@ class Shipingiputformscreen extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDateField(
-                      "تاريخ الوثيقة *",
-                    ),
-                  ],
+                Expanded(
+                    child: DateField(
+                  "",
+                  label: 'تاريخ الوثيقة *',
+                )),
+                DropdownField(
+                  "",
+                  lable: 'نوع الوثيقة الفرعي *',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDropdownField("نوع الوثيقة الفرعي *"),
-                  ],
+                DropdownField(
+                  "",
+                  lable: 'الوحدة المالية *',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDropdownField("الوحدة المالية *"),
-                  ],
+                buildTextField("السنة *"),
+                buildTextField("سعر التحويل"), buildTextField("العملة*"),
+                buildTextField("رقم العميل *"),
+                DropdownField(
+                  "",
+                  lable: 'رقم المخزن *',
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("السنة *"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("سعر التحويل"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("العملة*"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("رقم العميل *"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDropdownField("رقم المخزن *"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("التاريخ اليدوي*"),
-                  ],
+                buildTextField("التاريخ اليدوي*"),
+                buildTextField("البيان *", isLocked: true),
+                DropdownField(
+                  "",
+                  lable: 'تصنيف الضريبة*',
                 ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildTextField("البيان *", isLocked: true),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDropdownField("تصنيف الضريبة*"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    buildDateField(" تاريخ الاستحقاق *"),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-
-                // Additional Sections
+                Expanded(
+                    child: DateField(
+                  " ",
+                  label: 'تاريخ الاستحقاق *',
+                )),
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات اخري")),
                 SizedBox(
                   height: 20,
                 ),
 
+                // Additional Sections
+
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -338,12 +345,11 @@ Widget buildCheckInputField(String label, String amountLabel,
             onChanged: (value) {},
           ),
         Text(label),
-        SizedBox(width: 8),
         Expanded(
           child: TextFormField(
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                  borderSide: BorderSide(color: AppColors.griid)),
               labelText: amountLabel,
             ),
             keyboardType: TextInputType.number,
@@ -359,12 +365,12 @@ Widget buildTextField(String label, {bool isLocked = false}) {
     child: Directionality(
       textDirection: TextDirection.rtl,
       child: Padding(
-          padding: const EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 4),
           child: TextField(
             textAlign: TextAlign.left,
             decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                    borderSide: BorderSide(color: AppColors.griid)),
                 labelText: label,
                 labelStyle: TextStyle(
                   fontSize: 14,
@@ -377,7 +383,7 @@ Widget buildTextField(String label, {bool isLocked = false}) {
 
 Widget buildDropdownMenu(String title) {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 30),
+    padding: const EdgeInsets.symmetric(horizontal: 10),
     child: Expanded(
       child: DropdownButton<String>(
         hint: Text(title),
@@ -392,35 +398,6 @@ Widget buildDropdownMenu(String title) {
           ),
         ],
         onChanged: (value) {},
-      ),
-    ),
-  );
-}
-
-Widget buildDateField(String label) {
-  return Directionality(
-    textDirection: TextDirection.rtl,
-    child: Expanded(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: TextField(
-          textAlign: TextAlign.left,
-          decoration: InputDecoration(
-            enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xffd6d6d6))),
-            labelText: label,
-            labelStyle: TextStyle(
-              fontSize: 14,
-              color: Color(0xff819AA7),
-            ),
-            suffixIcon: Icon(
-              Icons.calendar_month,
-              color: Color(0xff819AA7),
-            ),
-            border: UnderlineInputBorder(),
-          ),
-          keyboardType: TextInputType.datetime,
-        ),
       ),
     ),
   );
@@ -472,7 +449,10 @@ Widget buildExpansionTile2(String title) {
                   children: [
                     Row(
                       children: [
-                        buildDropdownField('اسم المنتج*'),
+                        DropdownField(
+                          '',
+                          lable: 'اسم المنتج*',
+                        ),
                         SizedBox(
                           height: 20,
                           width: 1000,
@@ -518,51 +498,6 @@ Widget buildTableHeader(String title) {
       title,
       style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
       textAlign: TextAlign.end,
-    ),
-  );
-}
-
-Widget buildDropdownField(String label) {
-  return Expanded(
-    child: Directionality(
-      textDirection: TextDirection.rtl,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20),
-        child: DropdownButtonFormField2<String>(
-          decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
-              contentPadding: EdgeInsets.all(0)),
-          iconStyleData: IconStyleData(
-            icon: Icon(Icons.keyboard_arrow_down),
-            iconSize: 24,
-            iconEnabledColor: Color(0xff819AA7),
-          ),
-          dropdownStyleData: DropdownStyleData(
-            padding: EdgeInsets.zero,
-          ),
-          menuItemStyleData: MenuItemStyleData(padding: EdgeInsets.zero),
-          hint: Text(
-            textAlign: TextAlign.left,
-            label,
-            style: TextStyle(
-              fontSize: 14,
-              color: Color(0xff819AA7),
-            ),
-          ),
-          items: [
-            DropdownMenuItem(
-              child: Text("Option 1"),
-              value: "1",
-            ),
-            DropdownMenuItem(
-              child: Text("Option 2"),
-              value: "2",
-            ),
-          ],
-          onChanged: (value) {},
-        ),
-      ),
     ),
   );
 }

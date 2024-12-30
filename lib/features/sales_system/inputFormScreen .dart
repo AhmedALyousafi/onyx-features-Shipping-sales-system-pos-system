@@ -1,5 +1,6 @@
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive_utils.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/shipping%20information/pluto_grid.dart';
 
@@ -61,7 +62,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات إضافية *")),
                 SizedBox(
@@ -71,7 +72,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -144,7 +145,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات إضافية *")),
                 SizedBox(
@@ -154,7 +155,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -271,7 +272,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile("بيانات إضافية *")),
                 SizedBox(
@@ -281,7 +282,7 @@ class Inputformscreen extends StatelessWidget {
                 Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
-                      color: Colors.grey[200],
+                      color: AppColors.grid,
                     ),
                     child: buildExpansionTile2("الأصناف")),
                 SizedBox(
@@ -320,7 +321,7 @@ Widget buildCheckInputField(String label, String amountLabel,
           child: TextFormField(
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                  borderSide: BorderSide(color: AppColors.griid)),
               labelText: amountLabel,
             ),
             keyboardType: TextInputType.number,
@@ -341,7 +342,7 @@ Widget buildTextField(String label, {bool isLocked = false}) {
             textAlign: TextAlign.left,
             decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                    borderSide: BorderSide(color: AppColors.griid)),
                 labelText: label,
                 labelStyle: TextStyle(
                   fontSize: 14,
@@ -384,7 +385,7 @@ Widget buildDateField(String label) {
           textAlign: TextAlign.left,
           decoration: InputDecoration(
             enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                borderSide: BorderSide(color: AppColors.griid)),
             labelText: label,
             labelStyle: TextStyle(
               fontSize: 14,
@@ -510,7 +511,7 @@ Widget buildDropdownField(String label) {
         child: DropdownButtonFormField2<String>(
           decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                  borderSide: BorderSide(color: AppColors.griid)),
               contentPadding: EdgeInsets.all(0)),
           iconStyleData: IconStyleData(
             icon: Icon(Icons.keyboard_arrow_down),

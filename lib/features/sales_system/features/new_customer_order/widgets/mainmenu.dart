@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:onyx/core/model/newitemmodel.dart';
 import 'package:onyx/core/responsive/adaptivelayout.dart';
-import 'package:onyx/core/responsive/home/dropdown.dart';
+
+import 'package:onyx/core/utils/pupupmenubutton.dart';
 
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/List_butter.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/icon_order.dart';
+
+import '../../../../../core/theme/app_colors.dart';
 
 class Mainmenu extends StatelessWidget {
   List<MenuItemModel> record = [
@@ -185,6 +188,8 @@ class Mainmenu extends StatelessWidget {
         iconColor: Colors.red,
         onPressed: () {}),
   ];
+
+  Mainmenu({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -381,7 +386,7 @@ class Mainmenu extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.arrow_back_ios_new,
-                          color: Color(0xff0C69C0),
+                          color: AppColors.blue,
                           size: 14,
                         ),
                         SizedBox(
@@ -389,7 +394,7 @@ class Mainmenu extends StatelessWidget {
                         ),
                         Text('اذن صرف مردود المبيعات',
                             style: TextStyle(
-                              color: Color(0xff0C69C0),
+                              color: AppColors.blue,
                             )),
                         const Spacer(),
                         Container(
@@ -432,7 +437,7 @@ class Mainmenu extends StatelessWidget {
                       child: const Center(
                           child: Icon(
                         FontAwesomeIcons.anglesLeft,
-                        color: Color(0xff0C69C0),
+                        color: AppColors.blue,
                         size: 16,
                       )),
                     ),
@@ -445,7 +450,7 @@ class Mainmenu extends StatelessWidget {
                       child: const Center(
                           child: Icon(
                         FontAwesomeIcons.chevronLeft,
-                        color: Color(0xff0C69C0),
+                        color: AppColors.blue,
                         size: 16,
                       )),
                     ),
@@ -506,7 +511,7 @@ class Mainmenu extends StatelessWidget {
                     ),
                     IconButton(
                       icon: const Icon(FontAwesomeIcons.print,
-                          size: 18, color: Color(0xff0C69C0)),
+                          size: 18, color: AppColors.blue),
                       onPressed: () {},
                     ),
                     IconButton(
@@ -577,7 +582,7 @@ class Mainmenu extends StatelessWidget {
                       child: const Center(
                           child: Icon(
                         FontAwesomeIcons.anglesLeft,
-                        color: Color(0xff0C69C0),
+                        color: AppColors.blue,
                         size: 16,
                       )),
                     ),
@@ -590,7 +595,7 @@ class Mainmenu extends StatelessWidget {
                       child: const Center(
                           child: Icon(
                         FontAwesomeIcons.chevronLeft,
-                        color: Color(0xff0C69C0),
+                        color: AppColors.blue,
                         size: 16,
                       )),
                     ),
@@ -651,7 +656,7 @@ class Mainmenu extends StatelessWidget {
                     ),
                     IconButton(
                       icon: const Icon(FontAwesomeIcons.print,
-                          size: 18, color: Color(0xff0C69C0)),
+                          size: 18, color: AppColors.blue),
                       onPressed: () {},
                     ),
                     IconButton(
@@ -731,7 +736,7 @@ class Mainmenu extends StatelessWidget {
                           child: const Center(
                               child: Icon(
                             FontAwesomeIcons.anglesLeft,
-                            color: Color(0xff0C69C0),
+                            color: AppColors.blue,
                             size: 16,
                           )),
                         ),
@@ -744,7 +749,7 @@ class Mainmenu extends StatelessWidget {
                           child: const Center(
                               child: Icon(
                             FontAwesomeIcons.chevronLeft,
-                            color: Color(0xff0C69C0),
+                            color: AppColors.blue,
                             size: 16,
                           )),
                         ),
@@ -807,7 +812,7 @@ class Mainmenu extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(FontAwesomeIcons.print,
-                              size: 18, color: Color(0xff0C69C0)),
+                              size: 18, color: AppColors.blue),
                           onPressed: () {},
                         ),
                         IconButton(

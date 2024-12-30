@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;
@@ -45,7 +46,7 @@ class MenuItem extends StatelessWidget {
                     child: Icon(
                       icon,
                       size: 18,
-                      color: const Color(0xFF0C69C0),
+                      color:  AppColors.blue,
                     ),
                   ),
                 const SizedBox(width: 10),
@@ -63,7 +64,7 @@ class MenuItem extends StatelessWidget {
                 const Icon(
                   Icons.keyboard_arrow_down,
                   size: 16,
-                  color: Color(0xFF0C69C0),
+                  color: AppColors.blue,
                 ),
               ],
             ),

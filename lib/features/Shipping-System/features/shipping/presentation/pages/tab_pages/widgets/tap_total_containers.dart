@@ -1,3 +1,4 @@
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/tab_pages/widgets/tap_table_total_containers.dart';
 
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class TapTotalContainer extends StatelessWidget {
             child: TextFormField(
               decoration: InputDecoration(
                 enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                    borderSide: BorderSide(color: AppColors.griid)),
                 labelText: amountLabel,
               ),
               keyboardType: TextInputType.number,
@@ -61,7 +62,7 @@ class TapTotalContainer extends StatelessWidget {
               textAlign: TextAlign.left,
               decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                      borderSide: BorderSide(color: AppColors.griid)),
                   labelText: label,
                   labelStyle: TextStyle(
                     fontSize: 14,

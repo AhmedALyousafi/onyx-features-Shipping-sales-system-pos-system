@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:onyx/core/responsive/adaptivelayout.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class HeaderAllOrder extends StatelessWidget {
   const HeaderAllOrder({
@@ -14,7 +15,7 @@ class HeaderAllOrder extends StatelessWidget {
   final String title;
   final IconData icon;
 
-  static const Color primaryColor = Color(0xff0c69c0);
+  static const Color primaryColor = AppColors.blue;
   static const Color secondaryColor = Color(0xfff4f4f4);
   static const Color dividerColor = Color(0xFFE2E2E2);
   static const Color textColor = Color(0XFF4B4B4B);
@@ -164,7 +165,7 @@ class HeaderAllOrder extends StatelessWidget {
                 ),
                 child: const Icon(
                   Icons.close, // The "X" icon
-                  color: Color(0xff0C69C0), // Icon color
+                  color: AppColors.blue, // Icon color
                   size: 20,
                 ),
               ),

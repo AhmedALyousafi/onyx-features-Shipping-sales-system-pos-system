@@ -48,7 +48,7 @@ class SalesburdensTable extends StatelessWidget {
             child: DataTable(
               headingRowColor: MaterialStateColor.resolveWith(
                   (states) => const Color.fromARGB(255, 1, 100, 181)),
-              columns: [
+              columns: const [
                 DataColumn(
                     label: Text('رقم العبء',
                         style: TextStyle(color: Colors.white))),
@@ -74,11 +74,11 @@ class SalesburdensTable extends StatelessWidget {
                     label:
                         Text('المبلغ', style: TextStyle(color: Colors.white))),
               ],
-              rows: [
+              rows: const [
                 DataRow(cells: [
                   DataCell(Text('1',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 1, 100, 181)))),
+                          color: Color.fromARGB(255, 1, 100, 181)))),
                   DataCell(Text('اسم العبء')),
                   DataCell(Text('14141')),
                   DataCell(Text('الحساب التحليلي')),
@@ -90,7 +90,7 @@ class SalesburdensTable extends StatelessWidget {
                 DataRow(cells: [
                   DataCell(Text('1',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 1, 100, 181)))),
+                          color: Color.fromARGB(255, 1, 100, 181)))),
                   DataCell(Text('اسم العبء')),
                   DataCell(Text('14141')),
                   DataCell(Text('الحساب التحليلي')),
@@ -102,7 +102,7 @@ class SalesburdensTable extends StatelessWidget {
                 DataRow(cells: [
                   DataCell(Text('1',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 1, 100, 181)))),
+                          color: Color.fromARGB(255, 1, 100, 181)))),
                   DataCell(Text('اسم العبء')),
                   DataCell(Text('14141')),
                   DataCell(Text('الحساب التحليلي')),
@@ -127,7 +127,7 @@ class SalesburdensTable extends StatelessWidget {
           child: DataTable(
             headingRowColor: MaterialStateColor.resolveWith(
                 (states) => const Color.fromARGB(255, 1, 100, 181)),
-            columns: [
+            columns: const [
               DataColumn(
                   label:
                       Text('رقم الصنف', style: TextStyle(color: Colors.white))),
@@ -140,11 +140,11 @@ class SalesburdensTable extends StatelessWidget {
               DataColumn(
                   label: Text('المبلغ', style: TextStyle(color: Colors.white))),
             ],
-            rows: [
+            rows: const [
               DataRow(cells: [
                 DataCell(Text('1',
                     style: TextStyle(
-                        color: const Color.fromARGB(255, 1, 100, 181)))),
+                        color: Color.fromARGB(255, 1, 100, 181)))),
                 DataCell(Text('اسم العيب')),
                 DataCell(Text('14141')),
                 DataCell(Text('500.00')),
@@ -152,7 +152,7 @@ class SalesburdensTable extends StatelessWidget {
               DataRow(cells: [
                 DataCell(Text('1',
                     style: TextStyle(
-                        color: const Color.fromARGB(255, 1, 100, 181)))),
+                        color: Color.fromARGB(255, 1, 100, 181)))),
                 DataCell(Text('اسم العيب')),
                 DataCell(Text('14141')),
                 DataCell(Text('200.00')),

@@ -1,3 +1,4 @@
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,7 @@ class ShippingBreadcrumb extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
               decoration: BoxDecoration(
-                color: const Color(0xFF0C69C0),
+                color:  AppColors.blue,
                 borderRadius: BorderRadius.circular(4),
               ),
               child: Row(
@@ -99,7 +100,7 @@ class ShippingBreadcrumb extends StatelessWidget {
                     child: Text(
                       'X',
                       style: TextStyle(
-                        color: const Color(0xFF0C69C0),
+                        color:  AppColors.blue,
                         fontSize: ResponsiveUtils.getFontSize(context, 10),
                       ),
                     ),

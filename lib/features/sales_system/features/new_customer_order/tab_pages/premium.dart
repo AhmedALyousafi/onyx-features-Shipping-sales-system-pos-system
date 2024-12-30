@@ -1,6 +1,8 @@
 //الاقساط
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/responsive/home/dropdown.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/premium_Table.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +26,7 @@ class Premium extends StatelessWidget {
                 children: [
                   const SizedBox(width: 8),
                   Expanded(
-                    child: _buildDropdown('طريقة التوزيع*'),
+                    child: Dropdown('', lable: 'طريقة التوزيع*',),
                   ),
                   const SizedBox(width: 30),
                   Expanded(child: _buildTextField('عدد الاقساط*')),
@@ -54,44 +56,7 @@ class Premium extends StatelessWidget {
     );
   }
 
-  Widget _buildDropdown(String label) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Directionality(
-          textDirection: TextDirection.rtl,
-          child: DropdownButtonFormField2<String>(
-            decoration: const InputDecoration(
-                enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffd6d6d6))),
-                contentPadding: EdgeInsets.all(10)),
-            iconStyleData: const IconStyleData(
-                icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),
-            hint: Text(
-              label,
-              style: const TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-            items: const [
-              DropdownMenuItem(
-                child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text("اخر كل شهر")),
-                value: "1",
-              ),
-              DropdownMenuItem(
-                child: Align(
-                    alignment: Alignment.centerRight, child: Text("يومي")),
-                value: "2",
-              ),
-            ],
-            onChanged: (value) {},
-          ),
-        ),
-      ),
-    );
-  }
+
 
   Widget buildDropdoField(String label, List<String> items) {
     return BlocBuilder<InvoiceCubit, InvoiceState>(
@@ -125,7 +90,7 @@ class Premium extends StatelessWidget {
                                     color: Colors.white,
                                     border: Border(
                                       bottom: BorderSide(
-                                        color: Color(0xffD6D6D6),
+                                        color: AppColors.griid,
                                       ),
                                     ),
                                   ),

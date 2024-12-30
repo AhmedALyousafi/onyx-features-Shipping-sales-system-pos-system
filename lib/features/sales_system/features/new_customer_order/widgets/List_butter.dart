@@ -1,6 +1,7 @@
 //التحكم بي العناصر التالية:الصفحة الرئيسية,بيانات اخرى,بيانات اضافية,الضريبة,وغيره
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/Sales_burdens_Table.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/add_field.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/additional_data.dart';
@@ -113,13 +114,13 @@ class _TabsAndPagesState extends State<DocumentForm1>
                               ),
                               border: Border(
                                 top: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                                 right: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                                 left: BorderSide(
-                                  color: Color(0xFF0C69C0),
+                                  color: AppColors.blue,
                                 ),
                               ),
                             ),

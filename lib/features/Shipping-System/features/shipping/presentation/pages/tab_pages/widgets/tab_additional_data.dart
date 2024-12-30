@@ -1,6 +1,7 @@
 //بيانات اضافية
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive.dart';
 
 class Additionaldata extends StatelessWidget {
@@ -16,17 +17,12 @@ class Additionaldata extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    SizedBox(width: 2),
                     Expanded(
                       child: _buildDropdown('نص رقم مخزن'),
                     ),
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('رقم المشروع')),
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('دليل فرعي3')),
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('دليل فرعي4')),
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('دليل فرعي5')),
                   ],
                 ),
@@ -57,9 +53,7 @@ class Additionaldata extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('دليل فرعي4')),
-                    SizedBox(width: 2),
                     Expanded(child: _buildDropdown('دليل فرعي5')),
                     Expanded(child: _buildDropdown('دليل فرعي6')),
                   ],
@@ -96,7 +90,7 @@ class Additionaldata extends StatelessWidget {
         child: DropdownButtonFormField2<String>(
           decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                  borderSide: BorderSide(color: AppColors.griid)),
               contentPadding: EdgeInsets.all(0)),
           iconStyleData: IconStyleData(
               icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),

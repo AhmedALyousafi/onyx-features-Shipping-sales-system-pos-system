@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../../core/theme/app_colors.dart';
+
 class CheckBoxItem extends StatelessWidget {
   static final Map<String, TextEditingController> controllers = {
     'رقم الصندوق': TextEditingController(),
@@ -207,7 +209,7 @@ class CheckBoxItem extends StatelessWidget {
                       ),
                       if (state.isBankFieldVisible)
                         const Divider(
-                          color: Color(0xFF0C69C0),
+                          color: AppColors.blue,
                           thickness: 4,
                           endIndent: 50,
                           indent: 50,
@@ -390,7 +392,7 @@ class CheckBoxItem extends StatelessWidget {
                       ),
                       if (state.isBankFieldVisible)
                         const Divider(
-                          color: Color(0xFF0C69C0),
+                          color: AppColors.blue,
                           thickness: 4,
                           endIndent: 50,
                           indent: 50,
@@ -573,7 +575,7 @@ class CheckBoxItem extends StatelessWidget {
                       ),
                       if (state.isBankFieldVisible)
                         const Divider(
-                          color: Color(0xFF0C69C0),
+                          color: AppColors.blue,
                           thickness: 4,
                           endIndent: 50,
                           indent: 50,

@@ -12,7 +12,7 @@ class Main10 extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Column(
         children: [
-          CheckBoxItem(),
+          const CheckBoxItem(),
           Container(
             color: Colors.white,
             child: Column(

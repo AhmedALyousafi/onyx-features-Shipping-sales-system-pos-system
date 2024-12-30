@@ -1,5 +1,6 @@
 //جدول الضريبة
 import 'package:flutter/material.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class Tax_Table extends StatefulWidget {
   const Tax_Table({super.key});
@@ -254,7 +255,7 @@ class _TaxScreenState extends State<Tax_Table> {
                 constraints: BoxConstraints(minWidth: constraints.maxWidth),
                 child: DataTable(
                     headingRowColor: MaterialStateColor.resolveWith(
-                      (states) => const Color(0xFF0C69C0),
+                      (states) =>  AppColors.blue,
                     ),
                     headingTextStyle: const TextStyle(
                         color: Color.fromRGBO(255, 255, 255, 1),
@@ -327,7 +328,7 @@ class _TaxScreenState extends State<Tax_Table> {
               constraints: BoxConstraints(minWidth: constraints.maxWidth),
               child: DataTable(
                 headingRowColor: MaterialStateColor.resolveWith(
-                  (states) => const Color(0xFF0C69C0),
+                  (states) =>  AppColors.blue,
                 ),
                 headingTextStyle: const TextStyle(
                     color: Color.fromRGBO(255, 255, 255, 1),

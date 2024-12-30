@@ -1,6 +1,9 @@
 //بيانات اخرى
-import 'package:dropdown_button2/dropdown_button2.dart';
+
 import 'package:flutter/material.dart';
+import 'package:onyx/core/responsive/home/dropdown_field.dart';
+import 'package:onyx/core/theme/app_colors.dart';
+import 'package:onyx/core/utils/date_field.dart';
 import 'package:onyx/core/utils/responsive_utils.dart';
 
 class DocumentFormFields extends StatelessWidget {
@@ -17,11 +20,18 @@ class DocumentFormFields extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField("نوع الناقل"),
-                    buildDropdownField("الشركة الناقلة"),
+                    const DropdownField(
+                      '',
+                      lable: 'نوع الناقل',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'الشركة الناقلة',
+                    ),
                     buildTextField("ميناء الوصول"),
-                    buildDropdownField(
-                      "ميناء الشحن",
+                    const DropdownField(
+                      '',
+                      lable: 'ميناء الشحن',
                     ),
                     buildTextField("وحدة الشحن"),
                   ],
@@ -32,22 +42,42 @@ class DocumentFormFields extends StatelessWidget {
                     buildTextField(
                       "رقم التعهد",
                     ),
-                    buildDateField("تاريخ التعهد"),
+                    const Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ التعهد',
+                      ),
+                    ),
                     buildTextField("مكان التسليم"),
-                    buildDateField("تاريخ التسليم"),
+                    const Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ التسليم',
+                      ),
+                    ),
                     buildTextField("سعر وحدة الشحن"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField(
-                      "عملة الشحن",
+                    const DropdownField(
+                      '',
+                      lable: 'عملة الشحن',
                     ),
                     buildTextField("خط الشحن"),
-                    buildDropdownField("ميناء الشحن"),
-                    buildDropdownField("بلد المنشأ"),
-                    buildDropdownField("بلد التصدير"),
+                    const DropdownField(
+                      '',
+                      lable: 'ميناء الشحن',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'بلد المنشأ',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'بلد التصدير',
+                    ),
                   ],
                 ),
                 Row(
@@ -56,8 +86,14 @@ class DocumentFormFields extends StatelessWidget {
                     buildTextField(
                       "تاريخ انتهاء التعهد",
                     ),
-                    buildDropdownField("شروط التسليم"),
-                    buildDropdownField("شروط الدفع"),
+                    const DropdownField(
+                      '',
+                      lable: 'شروط التسليم',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'شروط الدفع',
+                    ),
                     buildTextField("مبلغ الشحن"),
                     buildTextField("اخر موعد للشحن"),
                   ],
@@ -74,16 +110,23 @@ class DocumentFormFields extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField("نوع الناقل"),
-                    buildDropdownField("الشركة الناقلة"),
+                    const DropdownField(
+                      '',
+                      lable: 'نوع الناقل',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'الشركة الناقلة',
+                    ),
                     buildTextField("ميناء الوصول"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField(
-                      "ميناء الشحن",
+                    const DropdownField(
+                      '',
+                      lable: 'ميناء الشحن',
                     ),
                     buildTextField("وحدة الشحن"),
                     buildTextField("رقم التعهد"),
@@ -93,18 +136,27 @@ class DocumentFormFields extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     buildTextField("مكان التسليم"),
-                    buildDateField("تاريخ التسليم"),
+                    const Expanded(
+                      child: DateField(
+                        "",
+                        label: 'تاريخ التسليم',
+                      ),
+                    ),
                     buildTextField("سعر وحدة الشحن"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField(
-                      "عملة الشحن",
+                    const DropdownField(
+                      '',
+                      lable: 'عملة الشحن',
                     ),
                     buildTextField("خط الشحن"),
-                    buildDropdownField("ميناء الشحن"),
+                    const DropdownField(
+                      '',
+                      lable: 'ميناء الشحن',
+                    ),
                   ],
                 ),
                 Row(
@@ -113,15 +165,27 @@ class DocumentFormFields extends StatelessWidget {
                     buildTextField(
                       "تاريخ انتهاء التعهد",
                     ),
-                    buildDropdownField("بلد المنشأ"),
-                    buildDropdownField("بلد التصدير"),
+                    const DropdownField(
+                      '',
+                      lable: 'بلد المنشأ',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'بلد التصدير',
+                    ),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildDropdownField("شروط التسليم"),
-                    buildDropdownField("شروط الدفع"),
+                    const DropdownField(
+                      '',
+                      lable: 'شروط التسليم',
+                    ),
+                    const DropdownField(
+                      '',
+                      lable: 'شروط الدفع',
+                    ),
                     buildTextField("مبلغ الشحن"),
                     buildTextField("اخر موعد للشحن"),
                   ],
@@ -135,32 +199,65 @@ class DocumentFormFields extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                buildDropdownField("نوع الناقل"),
-                buildDropdownField("الشركة الناقلة"),
+                const DropdownField(
+                  '',
+                  lable: 'نوع الناقل',
+                ),
+                const DropdownField(
+                  '',
+                  lable: 'الشركة الناقلة',
+                ),
                 buildTextField("ميناء الوصول"),
-                buildDropdownField(
-                  "ميناء الشحن",
+                const DropdownField(
+                  '',
+                  lable: 'ميناء الشحن',
                 ),
                 buildTextField("وحدة الشحن"),
                 buildTextField(
                   "رقم التعهد",
                 ),
-                buildDateField("تاريخ التعهد"),
+                const Expanded(
+                  child: DateField(
+                    "",
+                    label: 'تاريخ التعهد',
+                  ),
+                ),
                 buildTextField("مكان التسليم"),
-                buildDateField("تاريخ التسليم"),
+                const Expanded(
+                  child: DateField(
+                    "",
+                    label: 'تاريخ التسليم',
+                  ),
+                ),
                 buildTextField("سعر وحدة الشحن"),
-                buildDropdownField(
-                  "عملة الشحن",
+                const DropdownField(
+                  '',
+                  lable: 'عملة الشحن',
                 ),
                 buildTextField("خط الشحن"),
-                buildDropdownField("ميناء الشحن"),
-                buildDropdownField("بلد المنشأ"),
-                buildDropdownField("بلد التصدير"),
+                const DropdownField(
+                  '',
+                  lable: 'ميناء الشحن',
+                ),
+                const DropdownField(
+                  '',
+                  lable: 'بلد المنشأ',
+                ),
+                const DropdownField(
+                  '',
+                  lable: 'بلد التصدير',
+                ),
                 buildTextField(
                   "تاريخ انتهاء التعهد",
                 ),
-                buildDropdownField("شروط التسليم"),
-                buildDropdownField("شروط الدفع"),
+                const DropdownField(
+                  '',
+                  lable: 'شروط التسليم',
+                ),
+                const DropdownField(
+                  '',
+                  lable: 'شروط الدفع',
+                ),
                 buildTextField("مبلغ الشحن"),
                 buildTextField("اخر موعد للشحن"),
               ],
@@ -182,12 +279,12 @@ class DocumentFormFields extends StatelessWidget {
               onChanged: (value) {},
             ),
           Text(label),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Expanded(
             child: TextFormField(
               decoration: InputDecoration(
-                enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                enabledBorder: const UnderlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.griid)),
                 labelText: amountLabel,
               ),
               keyboardType: TextInputType.number,
@@ -203,14 +300,14 @@ class DocumentFormFields extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Padding(
-            padding: const EdgeInsets.only(left: 8),
+            padding: const EdgeInsets.only(left: 4),
             child: TextField(
               textAlign: TextAlign.left,
               decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Color(0xffd6d6d6))),
+                  enabledBorder: const UnderlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.griid)),
                   labelText: label,
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                     fontSize: 14,
                     color: Color(0xff819AA7),
                   )),
@@ -226,11 +323,11 @@ class DocumentFormFields extends StatelessWidget {
         child: DropdownButton<String>(
           hint: Text(title),
           items: [
-            DropdownMenuItem(
+            const DropdownMenuItem(
               value: "Option1",
               child: Text("Option 1"),
             ),
-            DropdownMenuItem(
+            const DropdownMenuItem(
               value: "Option2",
               child: Text("Option 2"),
             ),
@@ -240,78 +337,4 @@ class DocumentFormFields extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildDateField(String label) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Expanded(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 8),
-          child: TextField(
-            textAlign: TextAlign.left,
-            decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
-              labelText: label,
-              labelStyle: TextStyle(
-                fontSize: 14,
-                color: Color(0xff819AA7),
-              ),
-              suffixIcon: Icon(
-                Icons.calendar_month,
-                color: Color(0xff819AA7),
-              ),
-              border: UnderlineInputBorder(),
-            ),
-            keyboardType: TextInputType.datetime,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-Widget buildDropdownField(String label) {
-  return Expanded(
-    child: Directionality(
-      textDirection: TextDirection.rtl,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 8),
-        child: DropdownButtonFormField2<String>(
-          decoration: InputDecoration(
-              enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffd6d6d6))),
-              contentPadding: EdgeInsets.all(0)),
-          iconStyleData: IconStyleData(
-            icon: Icon(Icons.keyboard_arrow_down),
-            iconSize: 24,
-            iconEnabledColor: Color(0xff819AA7),
-          ),
-          dropdownStyleData: DropdownStyleData(
-            padding: EdgeInsets.zero,
-          ),
-          menuItemStyleData: MenuItemStyleData(padding: EdgeInsets.zero),
-          hint: Text(
-            textAlign: TextAlign.left,
-            label,
-            style: TextStyle(
-              fontSize: 14,
-              color: Color(0xff819AA7),
-            ),
-          ),
-          items: [
-            DropdownMenuItem(
-              child: Text("Option 1"),
-              value: "1",
-            ),
-            DropdownMenuItem(
-              child: Text("Option 2"),
-              value: "2",
-            ),
-          ],
-          onChanged: (value) {},
-        ),
-      ),
-    ),
-  );
 }

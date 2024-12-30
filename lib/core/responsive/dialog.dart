@@ -2,6 +2,7 @@ import 'package:onyx/core/responsive/widgetbutton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class PrintDialog extends StatefulWidget {
   const PrintDialog({super.key});
@@ -107,7 +108,7 @@ class _PrintDialogState extends State<PrintDialog> {
                       minimumSize: const Size(0, 36),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4)),
-                      backgroundColor: const Color(0xFF0C69C0),
+                      backgroundColor:  AppColors.blue,
                     ),
                   ),
                   const SizedBox(
@@ -163,7 +164,7 @@ class _PrintDialogState extends State<PrintDialog> {
       textDirection: TextDirection.rtl,
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: AppColors.grid,
           borderRadius: BorderRadius.circular(10),
         ),
         margin: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 10.0),

@@ -11,4 +11,7 @@ class AppColors {
   static const textPrimary = Color(0xFF4B4B4B);
   static const textSecondary = Color(0xFF819AA7);
   static const disabled = Color(0xFFA7A7A7);
+  static const griid = Color(0xffd6d6d6);
+  static var grid = Colors.grey[200];
+  static const blue = Color(0xFF0C69C0);
 }

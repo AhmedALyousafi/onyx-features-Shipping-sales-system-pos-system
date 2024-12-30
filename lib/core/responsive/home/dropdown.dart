@@ -1,92 +1,48 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:onyx/core/model/newitemmodel.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
-class PupupMenuButton extends StatefulWidget {
-  const PupupMenuButton({super.key, required this.title, required this.item});
-
-  final String title;
-  final List<MenuItemModel> item;
-
-  @override
-  State<PupupMenuButton> createState() => _PupupMenuButtonState();
-}
-
-class _PupupMenuButtonState extends State<PupupMenuButton> {
-  bool isHovered = false;
-
+class Dropdown extends StatelessWidget {
+  const Dropdown(
+    String s, {
+    super.key,
+    required this.lable,
+  });
+  final String lable;
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => isHovered = true),
-      onExit: (_) => setState(() => isHovered = false),
-      child: PopupMenuButton(
-        surfaceTintColor: Colors.grey,
-        tooltip: '',
-        offset: const Offset(0, 30),
-        itemBuilder: (context) => widget.item
-            .map((item) => PopupMenuItem<MenuItemModel>(
-                  height: BorderSide.strokeAlignCenter,
-                  value: item,
-                  child: Directionality(
-                    textDirection: TextDirection.rtl,
-                    child: TextButton(
-                      onPressed: () {
-                        item.onPressed();
-                        Navigator.pop(context);
-                      },
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Icon(
-                            item.icon,
-                            color: item.iconColor,
-                            size: 13,
-                          ),
-                          const SizedBox(width: 30),
-                          Text(
-                            item.text,
-                            style: const TextStyle(
-                              color: Color(0xFF474747),
-                              fontSize: 11.59,
-                              fontFamily: 'ReadexPro',
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ))
-            .toList(),
-        child: Container(
-          height: 30,
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          color: isHovered ? const Color(0xff0C69C0) : Color(0xffFBFBFB),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                widget.title,
-                style: TextStyle(
-                  color: isHovered ? Colors.white : const Color(0xFF474747),
-                  fontSize: 11.59,
-                  fontFamily: 'ReadexPro',
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              Icon(
-                Icons.keyboard_arrow_down,
-                color: isHovered ? Colors.white : const Color(0xFF0C69C0),
-                size: 20,
-              ),
-              const SizedBox(
-                width: 3,
-              ),
-            ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: DropdownButtonFormField2<String>(
+          decoration: const InputDecoration(
+              enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.griid)),
+              contentPadding: EdgeInsets.all(0)),
+          iconStyleData: const IconStyleData(
+              icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),
+          dropdownStyleData: const DropdownStyleData(
+            padding: EdgeInsets.zero,
           ),
+          menuItemStyleData: const MenuItemStyleData(padding: EdgeInsets.zero),
+          hint: Text(
+            lable,
+            style: const TextStyle(
+              color: Colors.grey,
+            ),
+          ),
+          items: const [
+            DropdownMenuItem(
+              child: Text("Option 1"),
+              value: "1",
+            ),
+            DropdownMenuItem(
+              child: Text("Option 2"),
+              value: "2",
+            ),
+          ],
+          onChanged: (value) {},
         ),
       ),
     );

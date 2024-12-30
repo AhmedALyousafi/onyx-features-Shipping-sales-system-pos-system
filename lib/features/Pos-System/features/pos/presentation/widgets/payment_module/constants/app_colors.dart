@@ -6,7 +6,7 @@ class AppColors {
   static const border = Color(0xFFE2E2E2);
   static const success = Color(0xFF319626);
   static const success100 = Color(0xFFF1FEF0);
-  static const primary = Color(0xFF0C69C0);
+  static const blue = Color(0xFF0C69C0);
   static const secondary = Color(0xFFF69B42);
   static const tertiary = Color(0xFFD2ECFC);
   static const neutral = Color(0xFFF2F2F2);
@@ -22,4 +22,6 @@ class AppColors {
   static var textSecondary;
 
   static var warning;
+
+  static var primary;
 }

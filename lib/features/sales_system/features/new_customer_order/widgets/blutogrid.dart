@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 import 'package:pluto_grid/pluto_grid.dart';
 
@@ -65,7 +66,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         title: '',
         field: 'selected',
         type: PlutoColumnType.text(),
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
         enableRowDrag: true,
         enableColumnDrag: true,
         enableRowChecked: true,
@@ -89,7 +90,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
         enableSorting: true,
         renderer: (rendererContext) {
           int currentIndex = rendererContext.rowIdx;
@@ -105,7 +106,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: hoveredIndex == currentIndex
-                      ? const Color(0xFF0C69C0)
+                      ?  AppColors.blue
                       : Colors.black,
                   decoration: hoveredIndex == currentIndex
                       ? TextDecoration.underline
@@ -122,7 +123,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'العبوة',
@@ -130,7 +131,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'الوحدة العددية',
@@ -138,7 +139,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'قيمة المعامل',
@@ -146,7 +147,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'المجموعات الرئيسية',
@@ -154,7 +155,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         enableContextMenu: false,
@@ -199,7 +200,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'تاريخ الانتهاء',
@@ -207,7 +208,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'المقطع التحليلي',
@@ -215,7 +216,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'مقطع تحليلي1',
@@ -223,7 +224,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'مقطع تحليلي2',
@@ -231,7 +232,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'مقطع تحليلي3',
@@ -239,7 +240,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'مقطع تحليلي4',
@@ -247,7 +248,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'وصف المقطع التحليلي',
@@ -255,7 +256,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.text(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'الطول',
@@ -263,7 +264,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'العرض',
@@ -271,7 +272,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'كمية مجانية',
@@ -279,7 +280,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'كمية مجانية إضافية',
@@ -287,7 +288,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'خصم ترويجي(%)',
@@ -295,7 +296,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'خصم ترويجي',
@@ -303,7 +304,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'الكمية المطلوبة',
@@ -311,7 +312,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'الكمية المتاحة',
@@ -319,7 +320,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
       PlutoColumn(
         title: 'السعر',
@@ -327,7 +328,7 @@ class _PlutoGridWidgetState extends State<CustomGrid1> {
         type: PlutoColumnType.number(),
         textAlign: PlutoColumnTextAlign.center,
         titleTextAlign: PlutoColumnTextAlign.center,
-        backgroundColor: const Color(0xFF0C69C0),
+        backgroundColor:  AppColors.blue,
       ),
     ];
 

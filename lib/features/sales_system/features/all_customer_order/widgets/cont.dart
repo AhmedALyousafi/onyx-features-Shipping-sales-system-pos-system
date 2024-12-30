@@ -1,6 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:onyx/core/responsive/adaptivelayout.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 
 class PaginationExample extends StatelessWidget {
   const PaginationExample({super.key});
@@ -57,7 +58,7 @@ class PaginationExample extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(3), // تحديد زاوية الحدود
               borderSide: const BorderSide(
-                  color: Color(0xff0C69C0), width: 1), // لون وسماكة الحدود
+                  color: AppColors.blue, width: 1), // لون وسماكة الحدود
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(3),
@@ -67,7 +68,7 @@ class PaginationExample extends StatelessWidget {
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(3),
               borderSide: const BorderSide(
-                  color: Color(0xff0C69C0), width: 2), // الحدود عند التركيز
+                  color: AppColors.blue, width: 2), // الحدود عند التركيز
             ),
           ),
           iconStyleData: const IconStyleData(
@@ -135,7 +136,7 @@ class PaginationExample extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: isSelected ? const Color(0xff0C69C0) : Colors.grey[200],
+        color: isSelected ?  AppColors.blue : AppColors.grid,
         shape: BoxShape.circle,
       ),
       child: Text(

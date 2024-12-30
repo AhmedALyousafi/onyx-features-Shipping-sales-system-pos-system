@@ -1,3 +1,4 @@
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class Shippingappbar extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              color: const Color(0xFF0C69C0),
+              color:  AppColors.blue,
               borderRadius: BorderRadius.circular(2),
             ),
             child: Builder(

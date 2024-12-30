@@ -136,7 +136,7 @@ class SidePanel extends StatelessWidget {
                       const SizedBox(height: AppConstants.defaultSpacing),
                       AppButton(
                         onPressed: () {},
-                        color: Color(0xff0C69C0),
+                        color: AppColors.blue,
                         width: 101,
                         height: 35,
                         child: const Icon(
@@ -156,7 +156,7 @@ class SidePanel extends StatelessWidget {
                         height: 35,
                         child: const Icon(
                           Icons.settings,
-                          color: Color(0xFF0C69C0),
+                          color: AppColors.blue,
                         ),
                       ),
                       const SizedBox(height: AppConstants.defaultSpacing),
@@ -189,7 +189,7 @@ class SidePanel extends StatelessWidget {
                         height: 35,
                         child: const Icon(
                           Icons.person_sharp,
-                          color: Color(0xFF0C69C0),
+                          color: AppColors.blue,
                         ),
                       ),
                       const SizedBox(height: AppConstants.defaultSpacing),

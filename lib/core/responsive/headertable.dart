@@ -1,4 +1,5 @@
 import 'package:onyx/core/responsive/dialog.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/core/utils/responsive_utils.dart';
 import 'package:onyx/features/sales_system/exportFileDialog.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +21,7 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
   static const Color trashColor = Color(0xffdc292f);
   static const Color exportColor = Color(0xFF319626);
   static const Color copyColor = Color(0XFF0084d8);
-  static const Color printColor = Color(0XFF0c69c0);
+  static const Color printColor = AppColors.blue;
   static const Color searchColor = Color(0XFFb7babf);
 
   @override
@@ -107,7 +108,7 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
       ],
       child: const Icon(
         FontAwesomeIcons.filter,
-        color: Color(0xff0c69c0),
+        color: AppColors.blue,
         size: 15,
       ),
     ));
@@ -210,7 +211,7 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
               filled: true,
               fillColor: Colors.white,
               enabledBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xffd6d6d6)),
+                borderSide: BorderSide(color: AppColors.griid),
               ),
               prefixIcon: Transform.rotate(
                 angle: 1.5,

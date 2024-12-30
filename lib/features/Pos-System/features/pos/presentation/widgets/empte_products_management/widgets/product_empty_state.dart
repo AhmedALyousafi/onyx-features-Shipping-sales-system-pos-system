@@ -1,5 +1,6 @@
 import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/cubit/state.dart';
+import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/plutogrid/pluto_grid_widget.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,7 @@ class ProductEmptyState extends StatelessWidget {
                           child: const Text(
                             'تحميل منتجات إفتراضية للعرض',
                             style: TextStyle(
-                              color: Color(0xFF0C69C0),
+                              color: AppColors.blue,
                               fontSize: 14,
                               fontFamily: 'Readex Pro',
                               fontWeight: FontWeight.w400,
