@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/widgets/datafrom.dart';
-import 'package:onyx/features/sales_system/inputFormScreen%20.dart';
+import 'package:onyx/features/sales_system/input_form_screen%20.dart';
 
 class Main10 extends StatelessWidget {
   const Main10({super.key});

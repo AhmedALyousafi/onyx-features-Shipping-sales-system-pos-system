@@ -1,5 +1,5 @@
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/home/shipping_appbar.dart';
-import 'package:onyx/features/sales_system/SummaryPanel.dart';
+import 'package:onyx/features/sales_system/summary_totals.dart';
 import 'package:onyx/features/sales_system/features/all_customer_order/widgets/menu_section.dart';
 
 import 'package:flutter/material.dart';

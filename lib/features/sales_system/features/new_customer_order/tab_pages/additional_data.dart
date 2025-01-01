@@ -25,17 +25,9 @@ class Additionaldata extends StatelessWidget {
             SizedBox(height: 16),
             Row(
               children: [
-                SizedBox(
-                  width: 360,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: _buildTextField('دليل فرعي5'),
-                  ),
-                ),
-                SizedBox(
-                  width: 40,
-                ),
-                SizedBox(width: 300, child: _buildTextField('دليل فرعي6')),
+                Expanded(child: _buildTextField('دليل فرعي5')),
+               
+              Expanded( child: _buildTextField('دليل فرعي6')),
               ],
             ),
             SizedBox(height: 16),
@@ -46,13 +38,16 @@ class Additionaldata extends StatelessWidget {
   }
 
   Widget _buildTextField(String label) {
-    return TextFormField(
-      decoration: InputDecoration(
-        enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.griid)),
-        labelText: label,
-        labelStyle: TextStyle(color: Colors.grey),
-        border: UnderlineInputBorder(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: TextFormField(
+        decoration: InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.griid)),
+          labelText: label,
+          labelStyle: TextStyle(color: Colors.grey),
+          border: UnderlineInputBorder(),
+        ),
       ),
     );
   }

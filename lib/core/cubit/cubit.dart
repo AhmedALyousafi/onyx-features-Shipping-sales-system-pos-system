@@ -1,10 +1,25 @@
+import 'package:dio/dio.dart';
 import 'package:onyx/core/cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:onyx/core/model/sign_in_model.dart';
+import 'package:onyx/core/repositories/user_repository.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/payment/pyment_widget.dart';
+import 'package:onyx/features/sales_system/features/all_customer_order/widgets/get_all_model.dart';
 
 class InvoiceCubit extends Cubit<InvoiceState> {
-  InvoiceCubit() : super(InvoiceState());
+  InvoiceCubit(this.userRepository) : super(InvoiceState());
+  final UserRepository userRepository;
+  GlobalKey<FormState> signInFormKey = GlobalKey();
+  //Sign in email
+  TextEditingController signInEmail = TextEditingController();
+  //Sign in password
+  TextEditingController signInPassword = TextEditingController();
+  TextEditingController signInId = TextEditingController();
+  //Sign Up Form key
+  GlobalKey<FormState> signUpFormKey = GlobalKey();
+  SignInModel? user;
+
 
   changeCalculator(bool? val) {
     emit(state.copyWith(calculator: val));
@@ -102,5 +117,28 @@ class InvoiceCubit extends Cubit<InvoiceState> {
         day: true,
       ));
     }
+  }
+  
+
+  signIn() async {
+    emit(SignInLoading());
+    final response = await userRepository.signIn(
+      email: signInEmail.text,
+      password: signInPassword.text,
+      id: signInId.text,
+    );
+    response.fold(
+      (errMessage) => emit(SignInFailure(errMessage: errMessage)),
+      (signInModel) => emit(SignInSuccess()),
+    );
+  }
+
+  getUserProfile() async {
+    emit(GetUserLoading());
+    final response = await userRepository.getUserProfile();
+    response.fold(
+      (errMessage) => emit(GetUserFailure(errMessage: errMessage)),
+      (user) => emit(GetUserSuccess(user: user)),
+    );
   }
 }

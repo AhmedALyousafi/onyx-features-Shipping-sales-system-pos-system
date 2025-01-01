@@ -5,7 +5,7 @@ import 'package:onyx/core/theme/app_colors.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/Sales_burdens_Table.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/add_field.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/additional_data.dart';
-import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/credit_Card.dart';
+import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/credit_card.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/download_document.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/main10.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/other_data.dart';

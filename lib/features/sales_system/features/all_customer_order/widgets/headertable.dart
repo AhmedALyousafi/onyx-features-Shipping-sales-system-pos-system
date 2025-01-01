@@ -1,7 +1,7 @@
 import 'package:onyx/core/responsive/adaptivelayout.dart';
 import 'package:onyx/core/responsive/dialog.dart';
 import 'package:onyx/core/theme/app_colors.dart';
-import 'package:onyx/features/sales_system/exportFileDialog.dart';
+import 'package:onyx/features/sales_system/export_file_dialog.dart';
 
 import 'package:onyx/features/sales_system/features/new_customer_order/view/dashboardPage.dart';
 import 'package:flutter/cupertino.dart';

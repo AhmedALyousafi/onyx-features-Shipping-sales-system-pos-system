@@ -28,11 +28,8 @@ class Premium extends StatelessWidget {
                   Expanded(
                     child: Dropdown('', lable: 'طريقة التوزيع*',),
                   ),
-                  const SizedBox(width: 30),
                   Expanded(child: _buildTextField('عدد الاقساط*')),
-                  const SizedBox(width: 30),
                   Expanded(child: _buildTextField('نسبة الدفعة المقدمة')),
-                  const SizedBox(width: 30),
                   Expanded(child: _buildTextField('مبلغ الدفعة المقدمة')),
                   _buildExecuteButton(),
                 ],
@@ -47,11 +44,14 @@ class Premium extends StatelessWidget {
   }
 
   Widget _buildTextField(String label) {
-    return TextFormField(
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle: const TextStyle(color: Colors.grey),
-        border: const UnderlineInputBorder(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: TextFormField(
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.grey),
+          border: const UnderlineInputBorder(),
+        ),
       ),
     );
   }
@@ -62,7 +62,7 @@ class Premium extends StatelessWidget {
     return BlocBuilder<InvoiceCubit, InvoiceState>(
       builder: (context, state) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Directionality(
             textDirection: TextDirection.rtl,
             child: SizedBox(

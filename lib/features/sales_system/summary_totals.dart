@@ -72,25 +72,35 @@ class _SummaryPanelState extends State<SummaryPanel> {
                       Row(
                         children: [
                           _buildSummaryCard(
-                              'الخصم ', FontAwesomeIcons.tag, '0.00'),
+                              'إجمالي السعر', FontAwesomeIcons.receipt, '0.00',
+                              color: Colors.green),
                           _buildSummaryCard(
-                              'الخصم ', FontAwesomeIcons.wallet, '0.00'),
+                              ' الخصم', FontAwesomeIcons.wallet, '0.00'),
+                          _buildSummaryCard('إجمالي الضريبة',
+                              FontAwesomeIcons.wallet, '0.00'),
                           _buildSummaryCard(
-                              'خصم الاصناف', FontAwesomeIcons.wallet, '0.00'),
+                              'خصم الأصناف', FontAwesomeIcons.wallet, '0.00'),
                           _buildSummaryCard(
-                              'إجمالي السعر', FontAwesomeIcons.receipt, '0.00'),
+                              'خصم ترويجي', FontAwesomeIcons.wallet, '0.00'),
+                          _buildSummaryCard(
+                              'إجمالي الكمية', FontAwesomeIcons.wallet, '0.00'),
                         ],
                       ),
                       Row(
                         children: [
                           _buildSummaryCard(
-                              'إجمالي الكمية', FontAwesomeIcons.wallet, '0.00'),
+                              'صافي المبلغ', FontAwesomeIcons.tag, '0.00',
+                              color: Colors.red),
+                          _buildSummaryCard(
+                              ' الخصم', FontAwesomeIcons.wallet, '0.00'),
+                          _buildSummaryCard('إجمالي الأعباء',
+                              FontAwesomeIcons.wallet, '0.00'),
                           _buildSummaryCard(
                               'خصم الأصناف', FontAwesomeIcons.wallet, '0.00'),
                           _buildSummaryCard(
-                              'اجمالي الخصم ', FontAwesomeIcons.wallet, '0.00'),
+                              'خصم ترويجي', FontAwesomeIcons.wallet, '0.00'),
                           _buildSummaryCard(
-                              'صافي المبلغ', FontAwesomeIcons.tag, '0.00'),
+                              'إجمالي الربح', FontAwesomeIcons.wallet, '0.00'),
                         ],
                       ),
                     ],
@@ -107,7 +117,7 @@ class _SummaryPanelState extends State<SummaryPanel> {
       {Color color = Colors.blue}) {
     return SizedBox(
       width: widget.isCollapsed
-          ? 237
+          ? 250
           : 208, // Adjust the width based on isCollapsed
       child: Card(
         shape: RoundedRectangleBorder(

@@ -1,7 +1,7 @@
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/shipping%20information/shipping_main_menu.dart';
 import 'package:onyx/features/sales_system/features/all_customer_order/widgets/menu_section.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/home/shipping_appbar.dart';
-import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/shipping%20information/shipping_tool_bar.dart';
+import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/shipping%20information/summary_panel.dart';
 import 'package:flutter/material.dart';
 
 class ShipingdashboardPage extends StatelessWidget {

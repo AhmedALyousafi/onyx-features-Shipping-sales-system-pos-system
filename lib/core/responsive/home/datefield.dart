@@ -10,7 +10,7 @@ class Datefield extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Expanded(
         child: Padding(
-          padding: const EdgeInsets.only(left: 4),
+          padding: const EdgeInsets.only(left: 5),
           child: TextField(
             textAlign: TextAlign.left,
             decoration: InputDecoration(

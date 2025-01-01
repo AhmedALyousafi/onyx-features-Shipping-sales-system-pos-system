@@ -1,6 +1,6 @@
 //بطاقة الائتمان
+import 'package:onyx/core/responsive/home/dropdown.dart';
 import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/credit_Card_Table.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
 class CreditCard extends StatelessWidget {
@@ -15,11 +15,11 @@ class CreditCard extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: _buildDropdown('نوع الحركة البنكية *'),
+                  child: Dropdown('', lable: 'نوع الحركة البنكية *',),
                 ),
                 Expanded(child: _buildTextField('اسم البنك*')),
                 Expanded(child: _buildTextField('اسم البطاقة*')),
-                Expanded(child: _buildDropdown('المبلغ البنكي*')),
+                Expanded(child: Dropdown('', lable: 'المبلغ البنكي*',)),
                 _buildExecuteButton(),
               ],
             ),
@@ -41,38 +41,7 @@ class CreditCard extends StatelessWidget {
     );
   }
 
-  Widget _buildDropdown(String label) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Directionality(
-          textDirection: TextDirection.rtl,
-          child: DropdownButtonFormField2<String>(
-            decoration: const InputDecoration(contentPadding: EdgeInsets.all(10)),
-            iconStyleData: const IconStyleData(
-                icon: Icon(Icons.keyboard_arrow_down), iconSize: 24),
-            hint: Text(
-              label,
-              style: const TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-            items: const[
-               DropdownMenuItem(
-                child: Text("Option 1"),
-                value: "1",
-              ),
-               DropdownMenuItem(
-                child: Text("Option 2"),
-                value: "2",
-              ),
-            ],
-            onChanged: (value) {},
-          ),
-        ),
-      ),
-    );
-  }
+ 
 }
 
 Widget _buildExecuteButton() {

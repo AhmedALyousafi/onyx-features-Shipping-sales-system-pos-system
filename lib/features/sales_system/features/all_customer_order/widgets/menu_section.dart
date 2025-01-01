@@ -1,4 +1,5 @@
 import 'package:onyx/core/cubit/cubit.dart';
+import 'package:onyx/core/repositories/user_repository.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/pos_screen.dart';
 import 'package:onyx/features/Shipping-System/features/shipping/presentation/pages/home/drawer_widget.dart';
 
@@ -125,12 +126,12 @@ class _MenuSectionState extends State<MenuSection> {
                 icon: Icons.circle_outlined,
                 onTap: () {
                   if (subItem == 'نظام طلبات العملاء') {
-                    _navigateToPage(context, CustomeRequest(), InvoiceCubit());
+                    _navigateToPage(context, CustomeRequest(), InvoiceCubit(UserRepository as UserRepository));
                   } else if (subItem == 'نظام البيع المباشر') {
                     _navigateToPage1(context, POSScreen());
                   } else if (subItem == 'نظام الشحن') {
                     _navigateToPage2(
-                        context, CustomeRequest1(), InvoiceCubit());
+                        context, CustomeRequest1(), InvoiceCubit(UserRepository as UserRepository));
                   }
                 },
               ),

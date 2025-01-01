@@ -12,7 +12,7 @@ class Dropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: DropdownButtonFormField2<String>(

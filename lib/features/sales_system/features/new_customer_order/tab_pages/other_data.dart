@@ -39,13 +39,16 @@ class Otherdata extends StatelessWidget {
   }
 
   Widget _buildTextField(String label) {
-    return TextFormField(
-      decoration: InputDecoration(
-        enabledBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.griid)),
-        labelText: label,
-        labelStyle: const TextStyle(color: Colors.grey),
-        border: const UnderlineInputBorder(),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: TextFormField(
+        decoration: InputDecoration(
+          enabledBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.griid)),
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.grey),
+          border: const UnderlineInputBorder(),
+        ),
       ),
     );
   }

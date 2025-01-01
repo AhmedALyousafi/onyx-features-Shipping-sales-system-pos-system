@@ -1,5 +1,5 @@
 import 'package:onyx/core/responsive/home/dropdown.dart';
-import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/dataTable.dart';
+import 'package:onyx/features/sales_system/features/new_customer_order/tab_pages/data_table.dart';
 import 'package:flutter/material.dart';
 
 class Tapsaccount extends StatelessWidget {

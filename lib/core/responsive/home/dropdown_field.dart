@@ -11,7 +11,7 @@ class DropdownField extends StatelessWidget {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Padding(
-          padding: const EdgeInsets.only(left: 4),
+          padding: const EdgeInsets.only(left: 5),
           child: DropdownButtonFormField2<String>(
             decoration: const InputDecoration(
                 enabledBorder: UnderlineInputBorder(
