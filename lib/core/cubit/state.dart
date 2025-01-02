@@ -1,4 +1,3 @@
-import 'package:onyx/core/cubit/cubit.dart';
 import 'package:onyx/core/model/user_model.dart';
 import 'package:onyx/features/sales_system/features/all_customer_order/widgets/get_all_model.dart';
 
@@ -87,8 +86,8 @@ class InvoiceState {
       getAllModel: getAllModel ?? this.getAllModel,
     );
   }
-  
 }
+
 final class UserInitial extends InvoiceState {}
 
 final class SignInSuccess extends InvoiceState {}
@@ -103,11 +102,7 @@ final class SignInFailure extends InvoiceState {
   SignInFailure({required this.errMessage});
 }
 
-final class SignUpSuccess extends InvoiceState {
-  final String message;
-
-  SignUpSuccess({required this.message});
-}
+final class SignUpSuccess extends InvoiceState {}
 
 final class SignUpLoading extends InvoiceState {}
 
@@ -124,10 +119,3 @@ final class GetUserSuccess extends InvoiceState {
 }
 
 final class GetUserLoading extends InvoiceState {}
-
-final class GetUserFailure extends InvoiceState {
-  final String errMessage;
-
-  GetUserFailure({required this.errMessage});
-}
-

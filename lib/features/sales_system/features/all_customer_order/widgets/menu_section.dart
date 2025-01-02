@@ -126,12 +126,12 @@ class _MenuSectionState extends State<MenuSection> {
                 icon: Icons.circle_outlined,
                 onTap: () {
                   if (subItem == 'نظام طلبات العملاء') {
-                    _navigateToPage(context, CustomeRequest(), InvoiceCubit(UserRepository as UserRepository));
+                    _navigateToPage(context, CustomeRequest(), InvoiceCubit());
                   } else if (subItem == 'نظام البيع المباشر') {
                     _navigateToPage1(context, POSScreen());
                   } else if (subItem == 'نظام الشحن') {
                     _navigateToPage2(
-                        context, CustomeRequest1(), InvoiceCubit(UserRepository as UserRepository));
+                        context, CustomeRequest1(), InvoiceCubit());
                   }
                 },
               ),

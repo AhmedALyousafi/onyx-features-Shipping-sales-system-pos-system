@@ -3,15 +3,11 @@ import 'package:onyx/core/cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:onyx/core/model/sign_in_model.dart';
-import 'package:onyx/core/repositories/user_repository.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/payment/pyment_widget.dart';
-import 'package:onyx/features/login/screnn/device.dart';
-import 'package:onyx/features/login/screnn/model.dart';
-import 'package:onyx/features/sales_system/features/all_customer_order/widgets/get_all_model.dart';
 
 class InvoiceCubit extends Cubit<InvoiceState> {
-  InvoiceCubit(this.userRepository) : super(InvoiceState());
-  final UserRepository userRepository;
+  InvoiceCubit() : super(InvoiceState());
+
   GlobalKey<FormState> signInFormKey = GlobalKey();
   //Sign in email
   TextEditingController signInEmail = TextEditingController();
@@ -122,11 +118,21 @@ class InvoiceCubit extends Cubit<InvoiceState> {
   }
 
   signIn() async {
-    DeviceInfoService deviceInfoService = DeviceInfoService();
-    Map info = await deviceInfoService.getDeviceInfo();
     try {
       emit(SignInLoading());
-      final response = await Dio().post(
+      final response = await Dio(BaseOptions(headers: {
+        'Calender': 'higrah',
+        'CharSet': 'AL32UTF8',
+        'IASConfig': 'OnyxIx',
+        'DateFormat': 'DD/MM/RRRR',
+        'TimeFormat': 'HH24:MI:SSA',
+        'ReportPrefix': 'IX',
+        'ReportPort': '8080',
+        'NetService': 'test',
+        'Territory': 'Egyptian',
+        'CID': 'A2024',
+        'APPID': '12o',
+      })).post(
           'https://learnonyx.com:8097/ultimate-onyxix/api/v5.1.5/erpweb/main/adm/user/login',
           data: {
             "lngNo": 1,
@@ -134,7 +140,7 @@ class InvoiceCubit extends Cubit<InvoiceState> {
             "dbsUsr": 1,
             "lgnByUsrCodeFlg": 0,
             "usrNo": 1,
-            "usrCode": 'test',
+            "usrCode": "test",
             "usrPswrd": signInPassword.text,
             "yrNo": 2024,
             "yearNo": 2024,
@@ -142,20 +148,19 @@ class InvoiceCubit extends Cubit<InvoiceState> {
             "sysNo": 1,
             "sysTyp": 1,
             "email": signInEmail.text,
-            "mobileNo": '0000',
-            'dvcInfo': DeviceInfoModel(
-              dvcTyp: info['deviceType'],
-              dvcNm: info['deviceName'],
-              dvcSrl: info['deviceSerial'],
-              dvcVrsn: info['deviceVersion'],
-              dvcMacAddrs: info['deviceMacAddress'],
-              dvcImei: info['deviceImei'],
-              osNm: info['osName'],
-              osVrsn: info['osVersion'],
-              brwsrNm: info['browserName'],
-              brwsrVrsn: "16",
-              // brwsrVrsn: info['browserVersion'],
-            ),
+            "mobileNo": "0000",
+            "dvcInfo": {
+              "browserName": "Safari",
+              "browserVersion": "16.0",
+              "deviceImei": "test00",
+              "deviceMacAddress": "test12",
+              "deviceName": "iPhone 12",
+              "deviceSerial": "edfss54fdrejf",
+              "deviceType": 1,
+              "deviceVersion": 12,
+              "osName": "iOS",
+              "osVersion": "16.4"
+            }
           });
       emit(SignInSuccess());
       print(response);
@@ -163,24 +168,42 @@ class InvoiceCubit extends Cubit<InvoiceState> {
       emit(SignInFailure(errMessage: e.toString()));
       print(e.toString());
     }
-    // emit(SignInLoading());
-    // final response = await userRepository.signIn(
-    //   email: signInEmail.text,
-    //   password: signInPassword.text,
-    //   id: signInId.text,
-    // );
-    // response.fold(
-    //   (errMessage) => emit(SignInFailure(errMessage: errMessage)),
-    //   (signInModel) => emit(SignInSuccess()),
-    // );
   }
 
-  // getUserProfile() async {
-  //   emit(GetUserLoading());
-  //   final response = await userRepository.getUserProfile();
-  //   response.fold(
-  //     (errMessage) => emit(GetUserFailure(errMessage: errMessage)),
-  //     (user) => emit(GetUserSuccess(user: user)),
-  //   );
-  // }
+  signUp() async {
+    try {
+      emit(SignUpLoading());
+      final response = await Dio(BaseOptions(headers: {
+        'DbsUsr': 9,
+        'YrNo': 2024,
+        'UntNoLgn': 2,
+        'UsrNo': 1,
+        'LngNo': 1,
+        'LngDflt': 1,
+        'Territory': 'Test',
+        'Token': 'xyz1234',
+        'CID': 'A1234',
+        'APPID': '',
+      })).post(
+          'https://88.80.145.121:8097/ultimate-onyxix/api/v5.1.5/erpweb/main/tmplt/qry/grdLst',
+          data: {
+            "doctyp": 1306,
+            "scrNo": 7363,
+            "untNo": 2,
+            "sysNo": 1,
+            "sysTyp": 1,
+            "srchVal": "123",
+            "crtnYr": "0",
+            "cntaFlag": "0",
+            "inactivFlag": "0",
+            "pgNo": "null",
+            "pgSz": "null"
+          });
+      emit(SignUpSuccess());
+      print(response);
+    } catch (e) {
+      emit(SignUpFailure(errMessage: e.toString()));
+      print(e.toString());
+    }
+  }
 }

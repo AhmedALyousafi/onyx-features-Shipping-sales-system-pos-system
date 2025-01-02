@@ -1,3 +1,6 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:onyx/core/cubit/cubit.dart';
+import 'package:onyx/core/cubit/state.dart';
 import 'package:onyx/core/responsive/adaptivelayout.dart';
 import 'package:onyx/core/responsive/dialog.dart';
 import 'package:onyx/core/theme/app_colors.dart';
@@ -28,10 +31,30 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveLayout(
-      mobileLayout: _buildMobileLayout(),
-      tabletLayout: _buildTabletLayout(),
-      desktopLayout: _buildDesktopLayout(),
+    return BlocConsumer<InvoiceCubit, InvoiceState>(
+      listener: (context, state) {
+        if (state is SignInSuccess) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("success"),
+            ),
+          );
+          // context.read<InvoiceCubit>().getUserProfile();
+        } else if (state is SignInFailure) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(state.errMessage),
+            ),
+          );
+        }
+      },
+      builder: (context, state) {
+        return AdaptiveLayout(
+          mobileLayout: _buildMobileLayout(),
+          tabletLayout: _buildTabletLayout(),
+          desktopLayout: _buildDesktopLayout(),
+        );
+      },
     );
   }
 
@@ -45,10 +68,10 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
         _iconButtonWidget(FontAwesomeIcons.trash, trashColor, onPressed: () {}),
         _iconButtonWidget(FontAwesomeIcons.fileExport, exportColor,
             onPressed: _showExportDialog),
-        _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor,
-            onPressed: () {}),
-        _iconButtonWidget(FontAwesomeIcons.print, printColor,
-            onPressed: _showPrintDialog),
+        _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor, onPressed: () {
+          context.read<InvoiceCubit>().signUp();
+        }),
+        _iconButtonWidget(FontAwesomeIcons.print, printColor, onPressed: () {}),
         _buildAddButton(),
         const Spacer(),
       ],
@@ -61,8 +84,9 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
       _iconButtonWidget(FontAwesomeIcons.trash, trashColor, onPressed: () {}),
       _iconButtonWidget(FontAwesomeIcons.fileExport, exportColor,
           onPressed: _showExportDialog),
-      _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor,
-          onPressed: () {}),
+      _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor, onPressed: () {
+        context.read<InvoiceCubit>().signUp();
+      }),
       _iconButtonWidget(FontAwesomeIcons.print, printColor,
           onPressed: _showPrintDialog),
       _buildAddButton(),
@@ -76,10 +100,10 @@ class _HeaderTableOrdersState extends State<HeaderTableOrders> {
       _iconButtonWidget(FontAwesomeIcons.trash, trashColor, onPressed: () {}),
       _iconButtonWidget(FontAwesomeIcons.fileExport, exportColor,
           onPressed: _showExportDialog),
-      _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor,
-          onPressed: () {}),
-      _iconButtonWidget(FontAwesomeIcons.print, printColor,
-          onPressed: _showPrintDialog),
+      _iconButtonWidget(FontAwesomeIcons.solidCopy, copyColor, onPressed: () {
+        context.read<InvoiceCubit>().signUp();
+      }),
+      _iconButtonWidget(FontAwesomeIcons.print, printColor, onPressed: () {}),
       _buildAddButton(),
       const Spacer(),
       _buildCheckboxFilters(),

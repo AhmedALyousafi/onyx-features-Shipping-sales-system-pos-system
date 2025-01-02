@@ -55,8 +55,8 @@ class CustomeRequest1 extends StatelessWidget {
                     color: Colors.white,
                     padding: const EdgeInsets.all(8),
                     child: ListView(
-                      children: [
-                        const Text(
+                      children: const [
+                        Text(
                           'القائمة الرئيسية',
                           style: TextStyle(
                             fontSize: 13,
@@ -65,16 +65,16 @@ class CustomeRequest1 extends StatelessWidget {
                           ),
                           textAlign: TextAlign.right,
                         ),
-                        const SizedBox(height: 6),
+                        SizedBox(height: 6),
                         MenuSection(
                           title: 'نظام إدارة العملاء',
                           icon: Icons.person_outline,
-                          subItems: const [],
+                          subItems: [],
                         ),
                         MenuSection(
                           title: 'نظام إدارة المبيعات',
                           icon: Icons.point_of_sale_outlined,
-                          subItems: const [
+                          subItems: [
                             'نظام إدارة العملاء',
                             'نظام إدارة المبيعات',
                             'نظام العمولات',
@@ -84,12 +84,12 @@ class CustomeRequest1 extends StatelessWidget {
                         MenuSection(
                           title: 'نظام العمولات',
                           icon: Icons.attach_money,
-                          subItems: const [],
+                          subItems: [],
                         ),
                         MenuSection(
                           title: 'نظام الصيانة',
                           icon: Icons.build,
-                          subItems: const [],
+                          subItems: [],
                         ),
                         // يمكنك إضافة المزيد من العناصر هنا
                       ],
@@ -113,7 +113,7 @@ class CustomeRequest1 extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Container(
                 decoration: BoxDecoration(
-                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)],
+                  boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 4)],
                   color: Colors.white,
                 ),
                 child: Column(
