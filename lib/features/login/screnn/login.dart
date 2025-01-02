@@ -23,11 +23,11 @@ class SignInScreen extends StatelessWidget {
                 content: Text("success"),
               ),
             );
-            context.read<InvoiceCubit>().getUserProfile();
+            // context.read<InvoiceCubit>().getUserProfile();
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) =>  CustomeRequest(),
+                builder: (context) => CustomeRequest(),
               ),
             );
           } else if (state is SignInFailure) {
@@ -43,7 +43,6 @@ class SignInScreen extends StatelessWidget {
             backgroundColor: const Color(0xffEEF1F3),
             body: Column(
               children: [
-             
                 Expanded(
                   child: Container(
                     decoration: const BoxDecoration(
@@ -62,14 +61,14 @@ class SignInScreen extends StatelessWidget {
                             CustomInputField(
                               labelText: 'Email',
                               hintText: 'Your email',
-                              controller: context.read<InvoiceCubit>().signInEmail,
+                              controller:
+                                  context.read<InvoiceCubit>().signInEmail,
                             ),
                             const SizedBox(height: 16),
                             //!Password
                             CustomInputField(
                               labelText: 'Password',
                               hintText: 'Your password',
-                              obscureText: true,
                               suffixIcon: true,
                               controller:
                                   context.read<InvoiceCubit>().signInPassword,

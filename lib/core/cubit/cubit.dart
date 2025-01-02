@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:onyx/core/model/sign_in_model.dart';
 import 'package:onyx/core/repositories/user_repository.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/payment/pyment_widget.dart';
+import 'package:onyx/features/login/screnn/device.dart';
+import 'package:onyx/features/login/screnn/model.dart';
 import 'package:onyx/features/sales_system/features/all_customer_order/widgets/get_all_model.dart';
 
 class InvoiceCubit extends Cubit<InvoiceState> {
@@ -18,8 +20,8 @@ class InvoiceCubit extends Cubit<InvoiceState> {
   TextEditingController signInId = TextEditingController();
   //Sign Up Form key
   GlobalKey<FormState> signUpFormKey = GlobalKey();
-  SignInModel? user;
 
+  SignInModel? user;
 
   changeCalculator(bool? val) {
     emit(state.copyWith(calculator: val));
@@ -118,27 +120,67 @@ class InvoiceCubit extends Cubit<InvoiceState> {
       ));
     }
   }
-  
 
   signIn() async {
-    emit(SignInLoading());
-    final response = await userRepository.signIn(
-      email: signInEmail.text,
-      password: signInPassword.text,
-      id: signInId.text,
-    );
-    response.fold(
-      (errMessage) => emit(SignInFailure(errMessage: errMessage)),
-      (signInModel) => emit(SignInSuccess()),
-    );
+    DeviceInfoService deviceInfoService = DeviceInfoService();
+    Map info = await deviceInfoService.getDeviceInfo();
+    try {
+      emit(SignInLoading());
+      final response = await Dio().post(
+          'https://learnonyx.com:8097/ultimate-onyxix/api/v5.1.5/erpweb/main/adm/user/login',
+          data: {
+            "lngNo": 1,
+            "lngDflt": 1,
+            "dbsUsr": 1,
+            "lgnByUsrCodeFlg": 0,
+            "usrNo": 1,
+            "usrCode": 'test',
+            "usrPswrd": signInPassword.text,
+            "yrNo": 2024,
+            "yearNo": 2024,
+            "untNo": 2,
+            "sysNo": 1,
+            "sysTyp": 1,
+            "email": signInEmail.text,
+            "mobileNo": '0000',
+            'dvcInfo': DeviceInfoModel(
+              dvcTyp: info['deviceType'],
+              dvcNm: info['deviceName'],
+              dvcSrl: info['deviceSerial'],
+              dvcVrsn: info['deviceVersion'],
+              dvcMacAddrs: info['deviceMacAddress'],
+              dvcImei: info['deviceImei'],
+              osNm: info['osName'],
+              osVrsn: info['osVersion'],
+              brwsrNm: info['browserName'],
+              brwsrVrsn: "16",
+              // brwsrVrsn: info['browserVersion'],
+            ),
+          });
+      emit(SignInSuccess());
+      print(response);
+    } catch (e) {
+      emit(SignInFailure(errMessage: e.toString()));
+      print(e.toString());
+    }
+    // emit(SignInLoading());
+    // final response = await userRepository.signIn(
+    //   email: signInEmail.text,
+    //   password: signInPassword.text,
+    //   id: signInId.text,
+    // );
+    // response.fold(
+    //   (errMessage) => emit(SignInFailure(errMessage: errMessage)),
+    //   (signInModel) => emit(SignInSuccess()),
+    // );
   }
 
-  getUserProfile() async {
-    emit(GetUserLoading());
-    final response = await userRepository.getUserProfile();
-    response.fold(
-      (errMessage) => emit(GetUserFailure(errMessage: errMessage)),
-      (user) => emit(GetUserSuccess(user: user)),
-    );
-  }
+  // getUserProfile() async {
+  //   emit(GetUserLoading());
+  //   final response = await userRepository.getUserProfile();
+  //   response.fold(
+  //     (errMessage) => emit(GetUserFailure(errMessage: errMessage)),
+  //     (user) => emit(GetUserSuccess(user: user)),
+  //   );
+  // }
 }
