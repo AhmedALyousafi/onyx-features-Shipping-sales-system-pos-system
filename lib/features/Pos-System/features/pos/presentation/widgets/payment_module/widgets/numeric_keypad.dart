@@ -44,7 +44,7 @@ class NumericKeypad extends StatelessWidget {
                 child: const Icon(
                   Icons.delete,
                   size: 35,
-                  color: Colors.red,
+                  color: Color(0xFFDC292F),
                 ),
               ),
               _buildEnterButton(),
@@ -78,8 +78,8 @@ class NumericKeypad extends StatelessWidget {
       child: Container(
         height: 68,
         decoration: BoxDecoration(
-          color: AppColors.surface,
-          border: Border.all(color: AppColors.neutral),
+          color: Color(0xFFFFFFFF),
+          border: Border.all(color: Color((0xFFF2F2F2))),
         ),
         child: TextButton(
           onPressed: () => onNumberPressed(number),

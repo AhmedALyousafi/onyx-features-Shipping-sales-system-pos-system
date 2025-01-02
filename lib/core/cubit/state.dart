@@ -1,4 +1,3 @@
-import 'package:onyx/core/model/user_model.dart';
 import 'package:onyx/features/sales_system/features/all_customer_order/widgets/get_all_model.dart';
 
 class InvoiceState {
@@ -110,12 +109,6 @@ final class SignUpFailure extends InvoiceState {
   final String errMessage;
 
   SignUpFailure({required this.errMessage});
-}
-
-final class GetUserSuccess extends InvoiceState {
-  final UserModel user;
-
-  GetUserSuccess({required this.user});
 }
 
 final class GetUserLoading extends InvoiceState {}

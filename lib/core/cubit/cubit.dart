@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:onyx/core/cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:onyx/core/model/sign_in_model.dart';
 import 'package:onyx/features/Pos-System/features/pos/presentation/widgets/payment/pyment_widget.dart';
 
 class InvoiceCubit extends Cubit<InvoiceState> {
@@ -16,8 +15,6 @@ class InvoiceCubit extends Cubit<InvoiceState> {
   TextEditingController signInId = TextEditingController();
   //Sign Up Form key
   GlobalKey<FormState> signUpFormKey = GlobalKey();
-
-  SignInModel? user;
 
   changeCalculator(bool? val) {
     emit(state.copyWith(calculator: val));

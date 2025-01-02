@@ -38,7 +38,7 @@ class PaymentMethodButtons extends StatelessWidget {
           },
         ),
         _buildMethodButton(
-          color: AppColors.primary,
+          color: AppColors.blue,
           icon: Icons.credit_card,
           onPressed: () {},
         ),
